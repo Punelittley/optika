@@ -507,7 +507,7 @@ button, input {
   object-position: right bottom;
   mix-blend-mode: multiply;
   display: block;
-  transform: scale(1.24) translate(-40px, 60px);
+  transform: scale(1.24) translate(-110px, 60px);
   transform-origin: right bottom;
 }
 
