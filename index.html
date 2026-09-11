@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>УРАЛ-ОПТИКА — Сеть салонов и мастерская в Магнитогорске</title>
+  <meta name="description" content="Сеть салонов Урал-Оптика в Магнитогорске. Оправы от 1 900 ₽, брендовые линзы SHAMIR, Neolook, St.Louise, проверка зрения и срочное изготовление от 20 минут в 7 салонах.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      
+      <a href="#" class="logo">
+        <img src="logo.png" alt="УРАЛ-ОПТИКА" class="site-logo-img">
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#promotions" class="nav-link nav-link-hot">Акции</a></li>
+          <li><a href="#catalog" class="nav-link">Каталог</a></li>
+          <li><a href="#about" class="nav-link">О нас</a></li>
+          <li><a href="#salons" class="nav-link">Салоны</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="header-vk-btn">
+          <span>Написать в VK</span>
+        </a>
+
+        <button class="mobile-toggle" id="menuToggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="УРАЛ-ОПТИКА" class="site-logo-img">
+      </a>
+      <button class="mobile-menu-close" id="menuClose" aria-label="Закрыть">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#promotions" class="mobile-nav-link">Акции</a></li>
+      <li><a href="#catalog" class="mobile-nav-link">Каталог</a></li>
+      <li><a href="#about" class="mobile-nav-link">О компании</a></li>
+      <li><a href="#salons" class="mobile-nav-link">Салоны</a></li>
+      <li><a href="#contacts" class="mobile-nav-link">Контакты</a></li>
+    </ul>
+    <div class="mobile-menu-contacts">
+      <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-vk-small">
+        <span>Написать в VK</span>
+      </a>
+      <span class="mobile-hours">Консультация онлайн: ежедневно</span>
+    </div>
+  </div>
+  <div class="backdrop" id="backdrop"></div>
+
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="kicker-line">
+          <span class="yellow-dash"></span>
+          <span class="kicker-text">ОФИЦИАЛЬНАЯ СЕТЬ ОПТИК В МАГНИТОГОРСКЕ</span>
+        </div>
+        <h1 class="hero-heading">
+          ВЗГЛЯД<br>
+          НА МИР<br>
+          <span class="text-red">ЯРЧЕ</span>
+        </h1>
+        <p class="hero-subheading">
+          Сеть современных салонов оптики и собственная лицензированная мастерская в Магнитогорске. Экспресс-изготовление очков от 20 минут.
+        </p>
+        <div class="hero-btns-row">
+          <a href="#catalog" class="btn-hero">
+            <span>Перейти в каталог</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#salons" class="btn-hero-outline">
+            <span>7 салонов рядом</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-portrait-container">
+          <img 
+            src="212.png" 
+            alt="Стильные очки Урал-Оптика" 
+            class="hero-portrait"
+            loading="eager"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promotions-section" id="promotions">
+    <div class="container">
+      <div class="section-title-row">
+        <div>
+          <div class="kicker-line">
+            <span class="red-dash"></span>
+            <span class="kicker-text">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</span>
+          </div>
+          <h2 class="section-heading">Акции в салонах «Урал-Оптика»</h2>
+          <p class="section-subheading">Действующие спецпредложения во всех 7 филиалах сети в Магнитогорске</p>
+        </div>
+        <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="view-all-link">Задать вопрос в VK →</a>
+      </div>
+
+      <div class="promo-slider-wrap">
+        <button class="slider-arrow slider-prev" id="promoPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="promo-slider-track-container" id="promoSliderContainer">
+          <div class="promo-slider-track" id="promoSliderTrack">
+
+            <div class="promo-slide">
+              <div class="promo-slide-card">
+                <div class="promo-slide-img-wrap">
+                  <img src="images/promo-knowledge-day.jpg" alt="День знаний — скидка 10% на оправу, 50% на изготовление" class="promo-slide-img" loading="lazy">
+                </div>
+                <div class="promo-slide-footer">
+                  <div class="promo-slide-info">
+                    <span class="promo-slide-tag tag-yellow">Спецпредложение</span>
+                    <h3 class="promo-slide-title">Скидка 10% на оправу + 50% на изготовление</h3>
+                  </div>
+                  <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-promo-slide">Заказать в VK</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="promo-slide">
+              <div class="promo-slide-card">
+                <div class="promo-slide-img-wrap">
+                  <img src="images/promo-shamir-50.jpg" alt="Очковые линзы Шамир со скидкой 50%" class="promo-slide-img" loading="lazy">
+                </div>
+                <div class="promo-slide-footer">
+                  <div class="promo-slide-info">
+                    <span class="promo-slide-tag tag-red">Скидка 50%</span>
+                    <h3 class="promo-slide-title">Линзы SHAMIR (Израиль) со скидкой 50%</h3>
+                  </div>
+                  <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-promo-slide">Подобрать в VK</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="promo-slide">
+              <div class="promo-slide-card">
+                <div class="promo-slide-img-wrap">
+                  <img src="images/promo-kids-frames-1000.jpg" alt="Детские оправы от 1000 рублей" class="promo-slide-img" loading="lazy">
+                </div>
+                <div class="promo-slide-footer">
+                  <div class="promo-slide-info">
+                    <span class="promo-slide-tag tag-yellow">Детям</span>
+                    <h3 class="promo-slide-title">Детские оправы от 1 000 рублей</h3>
+                  </div>
+                  <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-promo-slide">Смотреть в VK</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="promo-slide">
+              <div class="promo-slide-card">
+                <div class="promo-slide-img-wrap">
+                  <img src="images/promo-myopia-control-22000.jpg" alt="Очковые линзы для контроля близорукости" class="promo-slide-img" loading="lazy">
+                </div>
+                <div class="promo-slide-footer">
+                  <div class="promo-slide-info">
+                    <span class="promo-slide-tag tag-red">Здоровье глаз</span>
+                    <h3 class="promo-slide-title">Контроль миопии: 22 000 ₽ за пару</h3>
+                  </div>
+                  <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-promo-slide">Консультация</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="promo-slide">
+              <div class="promo-slide-card">
+                <div class="promo-slide-img-wrap bg-yellow-poster">
+                  <img src="images/promo-2gis-20.png" alt="Скидка 20% на солнцезащитные очки за отзыв в 2ГИС" class="promo-slide-img img-contain" loading="lazy">
+                </div>
+                <div class="promo-slide-footer">
+                  <div class="promo-slide-info">
+                    <span class="promo-slide-tag tag-dark">2ГИС</span>
+                    <h3 class="promo-slide-title">Скидка 20% на солнцезащитные очки</h3>
+                  </div>
+                  <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-promo-slide">Получить скидку</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="promo-slide">
+              <div class="promo-slide-card">
+                <div class="promo-slide-img-wrap bg-yellow-poster">
+                  <img src="images/promo-discount-10-50.png" alt="Скидка на оправу 10% и на изготовление 50%" class="promo-slide-img img-contain" loading="lazy">
+                </div>
+                <div class="promo-slide-footer">
+                  <div class="promo-slide-info">
+                    <span class="promo-slide-tag tag-yellow">Бонус</span>
+                    <h3 class="promo-slide-title">Скидка 10% на оправу + 50% на работу</h3>
+                  </div>
+                  <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-promo-slide">Забрать в VK</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="slider-arrow slider-next" id="promoNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="slider-dots" id="promoDots"></div>
+    </div>
+  </section>
+
+  <section class="products-section" id="catalog">
+    <div class="container">
+      <div class="section-title-row">
+        <div>
+          <div class="kicker-line">
+            <span class="red-dash"></span>
+            <span class="kicker-text">КАТАЛОГ</span>
+          </div>
+          <h2 class="section-heading">Каталог товаров и линз</h2>
+        </div>
+        <div class="catalog-tabs" id="catalogTabs">
+          <button class="tab-btn active" data-filter="all">Все</button>
+          <button class="tab-btn" data-filter="frames">Оправы</button>
+          <button class="tab-btn" data-filter="lenses">Очковые линзы</button>
+          <button class="tab-btn" data-filter="contact-lenses">Контактные линзы</button>
+          <button class="tab-btn" data-filter="discount">Акции и скидки</button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        
+        <div class="product-card" data-category="lenses discount">
+          <div class="product-visual">
+            <span class="hit-tag">ФОТОХРОМ</span>
+            <img 
+              src="images/shamir-photochrom.png" 
+              alt="Фотохромные линзы SHAMIR" 
+              class="product-image img-contain"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">SHAMIR (Израиль)</span>
+            <h3 class="product-title-item">Фотохромные линзы SHAMIR</h3>
+            <p class="product-model">
+              Меняют цвет от освещения: светлые в помещении, тёмные на ярком солнце. Цвета: коричневый и серый. В наличии все диоптрии.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Серый / Коричневый</span>
+              <span class="product-feature-tag">Все диоптрии</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">6 000 ₽ <small>/ пара</small></span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+            <div class="product-sub-note">
+              <span>✦ Астигматические линзы: <strong>3 400 ₽</strong> за пару</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-19%</span>
+            <img 
+              src="images/nueva-2231.jpg" 
+              alt="Оправа металлическая Nueva 2231" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NUEVA</span>
+            <h3 class="product-title-item">Оправа Nueva 2231</h3>
+            <p class="product-model">
+              Металлическая оправа с флексами, с силиконовыми носовыми упорами. Гарантия 1 год.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Металл</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">4 200 ₽</span>
+                <span class="old-price">5 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-19%</span>
+            <img 
+              src="images/nueva-3303.jpg" 
+              alt="Оправа металлическая Nueva 3303A" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NUEVA</span>
+            <h3 class="product-title-item">Оправа Nueva 3303A</h3>
+            <p class="product-model">
+              Стильная геометрическая оправа с флексами и мягкими силиконовыми носоупорами. Гарантия 1 год.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Геометрия</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">4 200 ₽</span>
+                <span class="old-price">5 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-19%</span>
+            <img 
+              src="images/nueva-1619.jpg" 
+              alt="Оправа металлическая Nueva 1619" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NUEVA</span>
+            <h3 class="product-title-item">Оправа Nueva 1619</h3>
+            <p class="product-model">
+              Тонкая круглая металлическая оправа с флексами и силиконовыми носовыми упорами. Гарантия 1 год.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Круглая</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">4 200 ₽</span>
+                <span class="old-price">5 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-19%</span>
+            <img 
+              src="images/nueva-1617.jpg" 
+              alt="Оправа металлическая Nueva 1617" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NUEVA</span>
+            <h3 class="product-title-item">Оправа Nueva 1617</h3>
+            <p class="product-model">
+              Трендовая восьмиугольная металлическая оправа с флексами и силиконовыми упорами. Гарантия 1 год.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Октагон</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">4 200 ₽</span>
+                <span class="old-price">5 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-8%</span>
+            <img 
+              src="images/neolook-4340.jpg" 
+              alt="Оправа Elfspirit EF-4340 Neolook" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NEOLOOK / ELFSPIRIT</span>
+            <h3 class="product-title-item">Оправа Elfspirit EF-4340</h3>
+            <p class="product-model">
+              Изящная форма «кошачий глаз» в комбинации розового золота и графита. С флексами и силиконовыми носовыми упорами.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Кошачий глаз</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">7 200 ₽</span>
+                <span class="old-price">7 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-8%</span>
+            <img 
+              src="images/neolook-4418.jpg" 
+              alt="Оправа Elfspirit EF-4418 Neolook" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NEOLOOK / ELFSPIRIT</span>
+            <h3 class="product-title-item">Оправа Elfspirit EF-4418</h3>
+            <p class="product-model">
+              Элегантная металлическая оправа с ажурными текстурными бровками. С флексами и силиконовыми носовыми упорами.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Ажурный декор</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">7 200 ₽</span>
+                <span class="old-price">7 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-8%</span>
+            <img 
+              src="images/neolook-4351.jpg" 
+              alt="Оправа Elfspirit EF-4351 Neolook" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NEOLOOK / ELFSPIRIT</span>
+            <h3 class="product-title-item">Оправа Elfspirit EF-4351</h3>
+            <p class="product-model">
+              Грациозная форма «бабочка» с акцентной голубой окантовкой. С флексами и силиконовыми носоупорами.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Форма бабочка</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">7 200 ₽</span>
+                <span class="old-price">7 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-8%</span>
+            <img 
+              src="images/neolook-4421.jpg" 
+              alt="Оправа Elfspirit EF-4421 Neolook" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NEOLOOK / ELFSPIRIT</span>
+            <h3 class="product-title-item">Оправа Elfspirit EF-4421</h3>
+            <p class="product-model">
+              Благородная геометрия в цвете розового золота с изумрудными заушниками. С флексами и мягкими упорами.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Геометрия</span>
+              <span class="product-feature-tag">С флексами</span>
+              <span class="product-feature-tag">Гарантия 1 год</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">7 200 ₽</span>
+                <span class="old-price">7 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-24%</span>
+            <img 
+              src="images/st-louise.jpg" 
+              alt="Оправы фирмы St.Louise" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">ST.LOUISE</span>
+            <h3 class="product-title-item">Оправы фирмы St.Louise</h3>
+            <p class="product-model">
+              Безободковые, полуободковые и модели с клипонами. В наших 7 оптиках вы найдете множество различных форм этой фирмы.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Безободковые</span>
+              <span class="product-feature-tag">С клипонами</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">5 200 ₽</span>
+                <span class="old-price">6 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-19%</span>
+            <img 
+              src="images/lazzaro-luxe.jpg" 
+              alt="Оправы фирмы LazaroLuxe" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">LAZZARO LUXE</span>
+            <h3 class="product-title-item">Оправы фирмы LazaroLuxe</h3>
+            <p class="product-model">
+              Стильная металлическая оправа с контрастной отделкой. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Контрастный стиль</span>
+              <span class="product-feature-tag">Силиконовые упоры</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">4 200 ₽</span>
+                <span class="old-price">5 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-24%</span>
+            <img 
+              src="images/nikitana-wine.jpg" 
+              alt="Оправы фирмы Nikitana винные" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NIKITANA</span>
+            <h3 class="product-title-item">Оправы Nikitana (Classic)</h3>
+            <p class="product-model">
+              Изящные женственные оправы в благородных винных и фиолетовых оттенках. В наших 7 оптиках вы найдете много других форм этой марки.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Винный / Пурпур</span>
+              <span class="product-feature-tag">Легкий металл</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 200 ₽</span>
+                <span class="old-price">4 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-24%</span>
+            <img 
+              src="images/nikitana-gold.jpg" 
+              alt="Оправы фирмы Nikitana круглые золотые" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">NIKITANA</span>
+            <h3 class="product-title-item">Оправы Nikitana (Gold Round)</h3>
+            <p class="product-model">
+              Трендовые круглые оправы цвета теплого золота с деликатной гравировкой по ободку. Большой выбор форм в салонах сети.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Золотой металл</span>
+              <span class="product-feature-tag">Круглая форма</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 200 ₽</span>
+                <span class="old-price">4 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-16%</span>
+            <img 
+              src="images/daccini.jpg" 
+              alt="Оправы фирмы DACCINI" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">DACCINI / DACCHI</span>
+            <h3 class="product-title-item">Оправы фирмы DACCINI</h3>
+            <p class="product-model">
+              Модели с двойным мостом (авиаторы) и круглые оправы. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Двойной мост / Авиатор</span>
+              <span class="product-feature-tag">Комбинированные</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 200 ₽</span>
+                <span class="old-price">3 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-19%</span>
+            <img 
+              src="images/glodiatr.jpg" 
+              alt="Оправы фирмы Glodiatr" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">GLODIATR</span>
+            <h3 class="product-title-item">Оправы фирмы Glodiatr</h3>
+            <p class="product-model">
+              Классические металлические и полуободковые оправы. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Полуободковые</span>
+              <span class="product-feature-tag">Легкий металл</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">4 200 ₽</span>
+                <span class="old-price">5 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames discount">
+          <div class="product-visual">
+            <span class="discount-tag">-24%</span>
+            <img 
+              src="images/alanie.jpg" 
+              alt="Оправы фирмы AlaniE" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">ALANIE</span>
+            <h3 class="product-title-item">Оправы фирмы AlaniE</h3>
+            <p class="product-model">
+              Изящные женские оправы с инкрустацией кристаллами и фигурной отделкой. В наших 7 оптиках вы найдете множество других моделей этой марки.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Инкрустация</span>
+              <span class="product-feature-tag">Женственная форма</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 200 ₽</span>
+                <span class="old-price">4 200 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <span class="hit-tag">ХИТ ЦЕНА</span>
+            <img 
+              src="images/defile.jpg" 
+              alt="Оправы фирмы Defile" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">DEFILE</span>
+            <h3 class="product-title-item">Оправы фирмы Defile</h3>
+            <p class="product-model">
+              Стильная оправа в матовом синем оттенке с изящными заушниками цвета розового золота. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Матовый синий</span>
+              <span class="product-feature-tag">Розовое золото</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">1 900 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/santurelli.jpg" 
+              alt="Оправы фирмы Santurelli" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">SANTURELLI</span>
+            <h3 class="product-title-item">Оправы фирмы Santurelli</h3>
+            <p class="product-model">
+              Стильная двухцветная оправа из прочного ацетата (черный глянец + ярко-красный кант). Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Ацетат</span>
+              <span class="product-feature-tag">Черный / Красный</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">2 100 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/leon.jpg" 
+              alt="Оправы фирмы LEON" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">LEON</span>
+            <h3 class="product-title-item">Оправы фирмы LEON (Sport)</h3>
+            <p class="product-model">
+              Эргономичная оправа в спортивном стиле из матового черного полимера с контрастными вставками. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Спортивный стиль</span>
+              <span class="product-feature-tag">Матовый черный</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/leon-jy915.jpg" 
+              alt="Оправа фирмы LEON металлическая" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">LEON</span>
+            <h3 class="product-title-item">Оправа фирмы LEON (Business)</h3>
+            <p class="product-model">
+              Строгая металлическая оправа прямоугольной формы в матовом черном исполнении с силиконовыми упорами. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Премиум металл</span>
+              <span class="product-feature-tag">Деловой стиль</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">5 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/paradise-elegant.jpg" 
+              alt="Оправы фирмы Paradise elegant" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">PARADISE ELEGANT</span>
+            <h3 class="product-title-item">Оправы Paradise Elegant</h3>
+            <p class="product-model">
+              Трендовые полупрозрачные оправы и стильные авиаторы с двойным мостом. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Прозрачный ацетат</span>
+              <span class="product-feature-tag">Авиаторы</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">2 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/subfin.jpg" 
+              alt="Оправы фирмы Subfin" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">SUBFIN / SUBFIRE</span>
+            <h3 class="product-title-item">Оправы фирмы Subfin</h3>
+            <p class="product-model">
+              Стильные легкие оправы в черепаховом и нежно-сиреневом исполнении. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Легкий ацетат</span>
+              <span class="product-feature-tag">Сиреневый / Черепаха</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">2 100 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <span class="hit-tag">ХИТ ЦЕНА</span>
+            <img 
+              src="images/lazzaro-polar.jpg" 
+              alt="Оправы фирмы LAZZARO и POLAR FASHION" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">LAZZARO & POLAR FASHION</span>
+            <h3 class="product-title-item">Оправы LAZZARO и POLAR FASHION</h3>
+            <p class="product-model">
+              Легкие ацетатные оправы в глубоких фиолетовых и черепаховых оттенках. Также вы можете найти много других форм оправ этих фирм в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Ацетат</span>
+              <span class="product-feature-tag">Фиолетовый / Черепаха</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">1 900 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/paradise-lazzaro.jpg" 
+              alt="Оправы фирмы Paradise elegante и LAZZARO" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">PARADISE ELEGANT & LAZZARO</span>
+            <h3 class="product-title-item">Оправы Paradise Elegant и LAZZARO</h3>
+            <p class="product-model">
+              Культовый черный «кошачий глаз» и золотые оправы-авиаторы с двойным мостом. Также вы можете найти много других форм оправ этих фирм в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Кошачий глаз / Авиатор</span>
+              <span class="product-feature-tag">Черный глянец / Золото</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/fashion-agent-1.jpg" 
+              alt="Оправы фирмы Fashion Agent Glitter и Leopard" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">FASHION AGENT</span>
+            <h3 class="product-title-item">Оправы Fashion Agent (Glitter & Leopard)</h3>
+            <p class="product-model">
+              Изящные оправы с мерцающим глиттерным напылением и леопардовые полуободковые модели. Также вы можете найти много других форм этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Глиттер / Леопард</span>
+              <span class="product-feature-tag">Кошачий глаз</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/fashion-agent-2.jpg" 
+              alt="Оправы фирмы Fashion Agent цветные" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">FASHION AGENT</span>
+            <h3 class="product-title-item">Оправы Fashion Agent (Color Accent)</h3>
+            <p class="product-model">
+              Утонченные металлические оправы в рубиново-красном и ярком бирюзовом исполнении. Также вы можете найти много других форм этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Рубин / Бирюза</span>
+              <span class="product-feature-tag">Утонченный металл</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="frames">
+          <div class="product-visual">
+            <img 
+              src="images/merel.jpg" 
+              alt="Оправы фирмы MEREL" 
+              class="product-image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">MEREL</span>
+            <h3 class="product-title-item">Оправы фирмы MEREL (Hand Made)</h3>
+            <p class="product-model">
+              Премиальный ручной ацетат (Hand Made Acetate). Строгие матовые и глянцевые формы с мозаичными заушниками. Также вы можете найти много других форм оправ этой фирмы в наших оптиках.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Hand Made Acetate</span>
+              <span class="product-feature-tag">Матовый / Глянец</span>
+              <span class="product-feature-tag">Большой выбор</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">3 800 ₽</span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="contact-lenses">
+          <div class="product-visual">
+            <span class="hit-tag">3 МЕСЯЦА</span>
+            <img 
+              src="images/contact-lenses-korea.jpg" 
+              alt="Мягкие контактные линзы Poly Cont-Q Корея" 
+              class="product-image"
+              style="object-position: center 25%;"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">POLY CONT-Q (Корея)</span>
+            <h3 class="product-title-item">Мягкие контактные линзы (3 мес.)</h3>
+            <p class="product-model">
+              Стерильные мягкие гидрогелевые контактные линзы плановой замены на 3 месяца производства Южная Корея. Максимальный комфорт глаз.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Срок: 3 месяца</span>
+              <span class="product-feature-tag">Производство Корея</span>
+              <span class="product-feature-tag">В наличии</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">550 ₽ <small>/ за 1 шт.</small></span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="lenses">
+          <div class="product-visual">
+            <span class="hit-tag">BLUE BLOCKER</span>
+            <img 
+              src="images/bluv-lenses.png" 
+              alt="Компьютерные линзы BLUV Lencor Vision" 
+              class="product-image"
+              style="object-position: center top;"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-details">
+            <span class="product-brand">LENCOR VISION</span>
+            <h3 class="product-title-item">Компьютерные линзы BLUV (2 в 1)</h3>
+            <p class="product-model">
+              Сделаны из инновационного материала BLUV, который эффективно блокирует вредный синий свет от мониторов, смартфонов и защищает от УФ-излучения.
+            </p>
+            <div class="product-features-row">
+              <span class="product-feature-tag">Защита от синего света</span>
+              <span class="product-feature-tag">Защита UV</span>
+              <span class="product-feature-tag">Для работы за ПК</span>
+            </div>
+            <div class="product-bottom-row">
+              <div class="price-wrap">
+                <span class="product-price">1 600 ₽ <small>/ за 1 линзу</small></span>
+              </div>
+              <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-check-stock">Написать в VK</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section-styled" id="about">
+    <div class="container">
+      <div class="brands-split-container">
+        <div class="brands-text-column">
+          <div class="about-inner-content">
+            <div class="kicker-line">
+              <span class="red-dash"></span>
+              <span class="kicker-text">О КОМПАНИИ</span>
+            </div>
+            <h2 class="brands-heading">Оптика «Урал-Оптика»</h2>
+            <p class="about-lead">
+              Желаете подобрать очки и выглядеть стильно? Напишите нам!<br>
+              <strong>«Урал-Оптика»</strong> — мы заботимся о Вас и о Вашем зрении ❤️
+            </p>
+
+            <ul class="about-points-list">
+              <li><span class="point-icon">✦</span> Большой выбор медицинских оправ и солнцезащитных очков.</li>
+              <li><span class="point-icon">✦</span> Грамотные оптометристы с медицинским образованием проверят зрение и подберут очковую и контактную коррекцию.</li>
+              <li><span class="point-icon">✦</span> Врачи-офтальмологи (детские и взрослые) по записи.</li>
+              <li><span class="point-icon">✦</span> Бесплатная диагностика зрения при заказе очков.</li>
+              <li><span class="point-icon">✦</span> Собственная лицензированная мастерская: изготовление и ремонт очков любой сложности.</li>
+              <li><span class="point-icon">✦</span> Мировые производители линз: <em>Carl Zeiss, Essilor, Shamir, BBGR, Rodenstock, Hoya, Neolook</em>.</li>
+              <li><span class="point-icon">✦</span> Всегда в наличии склады астигматических линз, самые быстрые поставки.</li>
+              <li><span class="point-icon">✦</span> Аксессуары: цепочки и шнурки, салфетки, футляры, стоперы, контактные линзы и растворы.</li>
+              <li><span class="point-icon">✦</span> Подарочные сертификаты на приобретение любой продукции.</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="brands-image-column">
+          <img 
+            src="images/about-silver-look.png" 
+            alt="Подбор очков в Урал-Оптика" 
+            class="brands-portrait"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages-bar">
+    <div class="container">
+      <div class="advantages-grid">
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <span class="advantage-label">0 ₽ проверка зрения при заказе</span>
+        </div>
+
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <span class="advantage-label">Срочно от 20 минут</span>
+        </div>
+
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <span class="advantage-label">Лицензированная мастерская</span>
+        </div>
+
+        <div class="advantage-item">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <span class="advantage-label">7 салонов в Магнитогорске</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section" id="social-banner">
+    <div class="container">
+      <div class="newsletter-banner">
+        <div class="newsletter-content">
+          <div class="kicker-line">
+            <span class="red-dash"></span>
+            <span class="kicker-text text-white-muted">МЫ НА СВЯЗИ</span>
+          </div>
+          <h2 class="newsletter-heading">
+            Следите за новинками<br>
+            и скидками ВКонтакте
+          </h2>
+          <p class="newsletter-sub">
+            Публикуем свежие поступления оправ, отзывы и специальные акции для подписчиков группы «Урал-Оптика».
+          </p>
+
+          <div class="banner-action-buttons">
+            <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-vk-banner">
+              <span>Написать в VK</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="newsletter-bg-visual">
+          <img 
+            src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?q=80&w=1200&auto=format&fit=crop" 
+            alt="Очки макро" 
+            class="newsletter-glasses-img"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="salons-section" id="salons">
+    <div class="container">
+      <div class="section-title-row">
+        <div>
+          <div class="kicker-line">
+            <span class="red-dash"></span>
+            <span class="kicker-text">МАГНИТОГОРСК</span>
+          </div>
+          <h2 class="section-heading">7 салонов «Урал-Оптика»</h2>
+          <p class="section-subheading">Сеть салонов и лицензированная мастерская в Магнитогорске</p>
+        </div>
+        <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="view-all-link">Связаться ВКонтакте</a>
+      </div>
+
+      <div class="salons-grid">
+        
+        <div class="salon-minimal-card main-salon" data-salon-idx="0" style="cursor: pointer;">
+          <div class="salon-badge-yellow">Центральный + Мастерская ⚡</div>
+          <h3 class="salon-title">ул. Карла Маркса, 42</h3>
+          <p class="salon-desc">Срочное изготовление за 20 минут, проверка зрения, ремонт очков и пайка оправ.</p>
+          <div class="salon-meta">
+            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
+            <span class="salon-map-link">Показать на карте</span>
+          </div>
+        </div>
+
+        <div class="salon-minimal-card" data-salon-idx="1" style="cursor: pointer;">
+          <div class="salon-badge-gray">Салон оптики</div>
+          <h3 class="salon-title">ул. Советская, 137</h3>
+          <p class="salon-desc">Проверка зрения, большой выбор оправ и контактных линз.</p>
+          <div class="salon-meta">
+            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
+            <span class="salon-map-link">Показать на карте</span>
+          </div>
+        </div>
+
+        <div class="salon-minimal-card" data-salon-idx="2" style="cursor: pointer;">
+          <div class="salon-badge-gray">Салон оптики</div>
+          <h3 class="salon-title">ул. Советская, 174</h3>
+          <p class="salon-desc">Детская и взрослая оптика, антивандальные силиконовые оправы.</p>
+          <div class="salon-meta">
+            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
+            <span class="salon-map-link">Показать на карте</span>
+          </div>
+        </div>
+
+        <div class="salon-minimal-card" data-salon-idx="3" style="cursor: pointer;">
+          <div class="salon-badge-gray">Салон оптики</div>
+          <h3 class="salon-title">пр. Ленина, 146</h3>
+          <p class="salon-desc">Подбор очков, солнцезащитные очки с поляризацией, аксессуары.</p>
+          <div class="salon-meta">
+            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
+            <span class="salon-map-link">Показать на карте</span>
+          </div>
+        </div>
+
+        <div class="salon-minimal-card" data-salon-idx="4" style="cursor: pointer;">
+          <div class="salon-badge-gray">ТРК «Крытый рынок»</div>
+          <h3 class="salon-title">ул. Карла Маркса, 74</h3>
+          <p class="salon-desc">Удобно совместить с покупками. Быстрая проверка зрения.</p>
+          <div class="salon-meta">
+            <span>🕒 Пн–Вс: 09:00 – 19:00</span>
+            <span class="salon-map-link">Показать на карте</span>
+          </div>
+        </div>
+
+        <div class="salon-minimal-card" data-salon-idx="5" style="cursor: pointer;">
+          <div class="salon-badge-gray">ТРК «МОСТ-2»</div>
+          <h3 class="salon-title">ул. Завенягина, 10а</h3>
+          <p class="salon-desc">Молодежные и трендовые оправы, линзы, солнцезащитные очки.</p>
+          <div class="salon-meta">
+            <span>🕒 Пн–Вс: 10:00 – 20:00</span>
+            <span class="salon-map-link">Показать на карте</span>
+          </div>
+        </div>
+
+        <div class="salon-minimal-card" data-salon-idx="6" style="cursor: pointer;">
+          <div class="salon-badge-gray">ТЦ «Пушкинский»</div>
+          <h3 class="salon-title">ул. Пушкина, 21</h3>
+          <p class="salon-desc">Филиал в Ленинском районе. Полный спектр услуг оптики.</p>
+          <div class="salon-meta">
+            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
+            <span class="salon-map-link">Показать на карте</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="salons-map-wrap">
+        <div id="salonsMap" class="salons-map-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="УРАЛ-ОПТИКА" class="site-logo-img">
+        </a>
+        <span class="footer-tagline">Сеть салонов и мастерская • Магнитогорск</span>
+      </div>
+
+      <div class="footer-nav">
+        <ul class="footer-nav-list">
+          <li><a href="#promotions">Акции</a></li>
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#salons">Салоны</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contacts">
+        <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="footer-vk-btn">
+          <span>Написать в VK</span>
+        </a>
+        <span class="footer-hours">Салоны: 10:00 – 19:00 / 20:00</span>
+      </div>
+
+      <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх">↑</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
