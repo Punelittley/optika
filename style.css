@@ -1500,14 +1500,23 @@ button, input {
     margin-right: auto;
   }
   .hero-portrait-container {
-    max-width: 460px;
-    height: 440px;
-    margin: 0 auto;
+    max-width: 440px;
+    height: 420px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     transform: none;
   }
   .hero-portrait {
-    transform: none;
-    object-position: center bottom;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.16) translateY(7%);
+    transform-origin: center bottom;
+    display: block;
   }
   .promo-slide {
     flex: 0 0 50%;
@@ -1600,7 +1609,7 @@ button, input {
   }
 
   .hero-section {
-    padding: 30px 0 20px;
+    padding: 30px 0 0;
   }
   .hero-heading {
     font-size: 2.1rem;
@@ -1626,12 +1635,21 @@ button, input {
   .hero-portrait-container {
     max-width: 320px;
     height: 310px;
-    margin: 36px auto 0;
+    margin: 24px auto 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
   }
   .hero-portrait {
-    max-height: 100%;
-    transform: translateY(20px);
-    object-position: center bottom;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.18) translateY(8.5%);
+    transform-origin: center bottom;
+    display: block;
   }
 
   .promotions-section,
