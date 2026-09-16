@@ -45,28 +45,263 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 
+  /* ==========================================================================
+     CATALOG PAGINATION & CATEGORY FILTER
+     ========================================================================== */
   const tabBtns = document.querySelectorAll('.tab-btn');
-  const productCards = document.querySelectorAll('.product-card');
+  const productCards = Array.from(document.querySelectorAll('.product-card'));
+  const loadMoreBtn = document.getElementById('catalogLoadMoreBtn');
+  const loadMoreText = document.getElementById('loadMoreBtnText');
+  const countInfo = document.getElementById('catalogCountInfo');
 
-  function filterCatalog(category) {
-    productCards.forEach(card => {
-      const cardCategory = card.getAttribute('data-category') || '';
-      const categories = cardCategory.split(' ');
-      if (category === 'all' || categories.includes(category)) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
+  const pageSize = window.innerWidth <= 640 ? 8 : 12;
+  let currentCategory = 'all';
+  let visibleCount = pageSize;
+
+  function updateCatalog() {
+    const matchingCards = productCards.filter(card => {
+      const cardCat = card.getAttribute('data-category') || '';
+      const cats = cardCat.split(' ');
+      return currentCategory === 'all' || cats.includes(currentCategory);
     });
+
+    const totalMatching = matchingCards.length;
+
+    productCards.forEach(card => card.classList.add('hidden'));
+
+    matchingCards.slice(0, visibleCount).forEach(card => {
+      card.classList.remove('hidden');
+    });
+
+    if (loadMoreBtn && countInfo) {
+      if (visibleCount < totalMatching) {
+        loadMoreBtn.classList.remove('hidden');
+        const remaining = totalMatching - visibleCount;
+        const nextBatch = Math.min(pageSize, remaining);
+        if (loadMoreText) {
+          loadMoreText.textContent = `Показать ещё товары (+${nextBatch})`;
+        }
+        countInfo.textContent = `Показано ${Math.min(visibleCount, totalMatching)} из ${totalMatching} позиций`;
+      } else {
+        loadMoreBtn.classList.add('hidden');
+        countInfo.textContent = `Показано все ${totalMatching} позиций категории`;
+      }
+    }
   }
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       tabBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.getAttribute('data-filter');
-      filterCatalog(filter);
+      currentCategory = btn.getAttribute('data-filter') || 'all';
+      visibleCount = pageSize;
+      updateCatalog();
     });
+  });
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibleCount += pageSize;
+      updateCatalog();
+    });
+  }
+
+  // Initial render
+  updateCatalog();
+
+  /* ==========================================================================
+     PRODUCT MODAL WITH MULTI-IMAGE GALLERY
+     ========================================================================== */
+  const productModal = document.getElementById('productModal');
+  const modalClose = document.getElementById('productModalClose');
+  const modalMainImg = document.getElementById('modalMainImg');
+  const modalBadge = document.getElementById('modalBadge');
+  const modalBrand = document.getElementById('modalBrand');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalPrice = document.getElementById('modalPrice');
+  const modalOldPrice = document.getElementById('modalOldPrice');
+  const modalTags = document.getElementById('modalTags');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalThumbs = document.getElementById('modalThumbs');
+  const modalPrevBtn = document.getElementById('modalGalleryPrev');
+  const modalNextBtn = document.getElementById('modalGalleryNext');
+  const modalCounter = document.getElementById('modalPhotoCounter');
+  const modalVkBtn = document.getElementById('modalVkBtn');
+
+  let currentModalImages = [];
+  let currentModalImageIndex = 0;
+
+  function setModalImage(index) {
+    if (!currentModalImages.length) return;
+    currentModalImageIndex = (index + currentModalImages.length) % currentModalImages.length;
+    
+    if (modalMainImg) {
+      modalMainImg.style.opacity = '0.3';
+      modalMainImg.src = currentModalImages[currentModalImageIndex];
+      setTimeout(() => {
+        modalMainImg.style.opacity = '1';
+      }, 70);
+    }
+
+    if (modalCounter) {
+      modalCounter.textContent = `${currentModalImageIndex + 1} / ${currentModalImages.length}`;
+    }
+
+    if (modalThumbs) {
+      const thumbs = modalThumbs.querySelectorAll('.modal-thumb-btn');
+      thumbs.forEach((t, i) => {
+        if (i === currentModalImageIndex) {
+          t.classList.add('active');
+        } else {
+          t.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  function openProductModal(card) {
+    if (!productModal) return;
+
+    const brandEl = card.querySelector('.product-brand');
+    const titleEl = card.querySelector('.product-title-item');
+    const descEl = card.querySelector('.product-model');
+    const priceEl = card.querySelector('.product-price');
+    const oldPriceEl = card.querySelector('.old-price');
+    const tagEls = card.querySelectorAll('.product-feature-tag');
+    const badgeEl = card.querySelector('.hit-tag, .discount-tag');
+    const mainImgEl = card.querySelector('.product-image');
+
+    const dataImages = card.getAttribute('data-images');
+    if (dataImages) {
+      try {
+        currentModalImages = JSON.parse(dataImages);
+      } catch (e) {
+        currentModalImages = mainImgEl ? [mainImgEl.src] : [];
+      }
+    } else {
+      currentModalImages = mainImgEl ? [mainImgEl.src] : [];
+    }
+
+    if (modalBrand) modalBrand.textContent = brandEl ? brandEl.textContent.trim() : 'УРАЛ-ОПТИКА';
+    if (modalTitle) modalTitle.textContent = titleEl ? titleEl.textContent.trim() : '';
+    if (modalDesc) modalDesc.textContent = descEl ? descEl.textContent.trim() : '';
+    if (modalPrice) modalPrice.innerHTML = priceEl ? priceEl.innerHTML : 'В наличии';
+    if (modalOldPrice) {
+      modalOldPrice.textContent = oldPriceEl ? oldPriceEl.textContent.trim() : '';
+      modalOldPrice.style.display = oldPriceEl ? 'inline-block' : 'none';
+    }
+
+    if (modalBadge) {
+      if (badgeEl) {
+        modalBadge.textContent = badgeEl.textContent.trim();
+        modalBadge.style.display = 'block';
+      } else {
+        modalBadge.textContent = 'В НАЛИЧИИ';
+        modalBadge.style.display = 'block';
+      }
+    }
+
+    if (modalTags) {
+      modalTags.innerHTML = '';
+      tagEls.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'modal-tag';
+        span.textContent = tag.textContent.trim();
+        modalTags.appendChild(span);
+      });
+    }
+
+    if (modalThumbs) modalThumbs.innerHTML = '';
+
+    if (currentModalImages.length > 1) {
+      if (modalPrevBtn) modalPrevBtn.classList.remove('hidden');
+      if (modalNextBtn) modalNextBtn.classList.remove('hidden');
+      if (modalCounter) modalCounter.classList.remove('hidden');
+      if (modalThumbs) {
+        modalThumbs.classList.remove('hidden');
+        currentModalImages.forEach((imgSrc, idx) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = `modal-thumb-btn ${idx === 0 ? 'active' : ''}`;
+          btn.setAttribute('aria-label', `Ракурс ${idx + 1}`);
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = `Миниатюра ${idx + 1}`;
+          btn.appendChild(img);
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            setModalImage(idx);
+          });
+          modalThumbs.appendChild(btn);
+        });
+      }
+    } else {
+      if (modalPrevBtn) modalPrevBtn.classList.add('hidden');
+      if (modalNextBtn) modalNextBtn.classList.add('hidden');
+      if (modalCounter) modalCounter.classList.add('hidden');
+      if (modalThumbs) modalThumbs.classList.add('hidden');
+    }
+
+    if (modalVkBtn) {
+      modalVkBtn.href = 'https://vk.me/uraloptikm';
+    }
+
+    setModalImage(0);
+
+    productModal.classList.add('active');
+    productModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeProductModal() {
+    if (!productModal) return;
+    productModal.classList.remove('active');
+    productModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  productCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) {
+        return;
+      }
+      openProductModal(card);
+    });
+  });
+
+  if (modalClose) modalClose.addEventListener('click', closeProductModal);
+
+  if (productModal) {
+    productModal.addEventListener('click', (e) => {
+      if (e.target === productModal) {
+        closeProductModal();
+      }
+    });
+  }
+
+  if (modalPrevBtn) {
+    modalPrevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setModalImage(currentModalImageIndex - 1);
+    });
+  }
+
+  if (modalNextBtn) {
+    modalNextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setModalImage(currentModalImageIndex + 1);
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (!productModal || !productModal.classList.contains('active')) return;
+    if (e.key === 'Escape') {
+      closeProductModal();
+    } else if (e.key === 'ArrowLeft') {
+      setModalImage(currentModalImageIndex - 1);
+    } else if (e.key === 'ArrowRight') {
+      setModalImage(currentModalImageIndex + 1);
+    }
   });
 
   const promoTrack = document.getElementById('promoSliderTrack');
