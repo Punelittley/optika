@@ -69,6 +69,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const reviewFilterBtns = document.querySelectorAll('.reviews-filter-btn');
+  const reviewCards = document.querySelectorAll('.review-card');
+
+  if (reviewFilterBtns.length > 0 && reviewCards.length > 0) {
+    reviewFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        reviewFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-review-filter');
+
+        reviewCards.forEach(card => {
+          const category = card.getAttribute('data-review-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
   const promoTrack = document.getElementById('promoSliderTrack');
   const promoSlides = document.querySelectorAll('.promo-slide');
   const promoPrevBtn = document.getElementById('promoPrev');
