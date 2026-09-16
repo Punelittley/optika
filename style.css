@@ -876,6 +876,7 @@ button, input {
 
 .catalog-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   background: var(--color-card-bg);
   padding: 4px;
