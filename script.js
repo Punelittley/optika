@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
@@ -110,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCatalog();
 
   /* ==========================================================================
-     PRODUCT MODAL WITH MULTI-IMAGE GALLERY
+     ИНТЕРАКТИВНОЕ МОДАЛЬНОЕ ОКНО ТОВАРА («ПРОВАЛИТЬСЯ И НАПИСАТЬ»)
      ========================================================================== */
   const productModal = document.getElementById('productModal');
   const modalClose = document.getElementById('productModalClose');
@@ -126,7 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalPrevBtn = document.getElementById('modalGalleryPrev');
   const modalNextBtn = document.getElementById('modalGalleryNext');
   const modalCounter = document.getElementById('modalPhotoCounter');
+  const modalWaBtn = document.getElementById('modalWaBtn');
   const modalVkBtn = document.getElementById('modalVkBtn');
+  const modalMaxBtn = document.getElementById('modalMaxBtn');
 
   let currentModalImages = [];
   let currentModalImageIndex = 0;
@@ -136,11 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentModalImageIndex = (index + currentModalImages.length) % currentModalImages.length;
     
     if (modalMainImg) {
-      modalMainImg.style.opacity = '0.3';
       modalMainImg.src = currentModalImages[currentModalImageIndex];
-      setTimeout(() => {
-        modalMainImg.style.opacity = '1';
-      }, 70);
     }
 
     if (modalCounter) {
@@ -148,12 +144,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (modalThumbs) {
-      const thumbs = modalThumbs.querySelectorAll('.modal-thumb-btn');
+      const thumbs = modalThumbs.querySelectorAll('.modal-thumb');
       thumbs.forEach((t, i) => {
         if (i === currentModalImageIndex) {
-          t.classList.add('active');
+          t.classList.add('is-active');
         } else {
-          t.classList.remove('active');
+          t.classList.remove('is-active');
         }
       });
     }
@@ -166,40 +162,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleEl = card.querySelector('.product-title-item');
     const descEl = card.querySelector('.product-model');
     const priceEl = card.querySelector('.product-price');
-    const oldPriceEl = card.querySelector('.old-price');
+    const oldPriceEl = card.querySelector('.product-old-price, .old-price');
     const tagEls = card.querySelectorAll('.product-feature-tag');
     const badgeEl = card.querySelector('.hit-tag, .discount-tag');
     const mainImgEl = card.querySelector('.product-image');
+
+    const brandText = brandEl ? brandEl.textContent.trim() : 'УРАЛ-ОПТИКА';
+    const titleText = titleEl ? titleEl.textContent.trim() : 'Оправа / Очки';
+    const priceHtml = priceEl ? priceEl.innerHTML : 'от 2 500 ₽';
+    const cleanPrice = priceEl ? priceEl.textContent.replace(/\s+/g, ' ').trim() : 'от 2 500 ₽';
+    const oldPriceText = oldPriceEl ? oldPriceEl.textContent.trim() : '';
+    const descText = descEl ? descEl.textContent.trim() : 'Стильная качественная оправа в наличии в салонах сети.';
+    const badgeText = badgeEl ? badgeEl.textContent.trim() : 'В НАЛИЧИИ';
 
     const dataImages = card.getAttribute('data-images');
     if (dataImages) {
       try {
         currentModalImages = JSON.parse(dataImages);
       } catch (e) {
-        currentModalImages = mainImgEl ? [mainImgEl.src] : [];
+        currentModalImages = mainImgEl ? [mainImgEl.getAttribute('src')] : [];
       }
+    } else if (mainImgEl) {
+      currentModalImages = [mainImgEl.getAttribute('src')];
     } else {
-      currentModalImages = mainImgEl ? [mainImgEl.src] : [];
+      currentModalImages = [];
     }
 
-    if (modalBrand) modalBrand.textContent = brandEl ? brandEl.textContent.trim() : 'УРАЛ-ОПТИКА';
-    if (modalTitle) modalTitle.textContent = titleEl ? titleEl.textContent.trim() : '';
-    if (modalDesc) modalDesc.textContent = descEl ? descEl.textContent.trim() : '';
-    if (modalPrice) modalPrice.innerHTML = priceEl ? priceEl.innerHTML : 'В наличии';
-    if (modalOldPrice) {
-      modalOldPrice.textContent = oldPriceEl ? oldPriceEl.textContent.trim() : '';
-      modalOldPrice.style.display = oldPriceEl ? 'inline-block' : 'none';
-    }
-
-    if (modalBadge) {
-      if (badgeEl) {
-        modalBadge.textContent = badgeEl.textContent.trim();
-        modalBadge.style.display = 'block';
-      } else {
-        modalBadge.textContent = 'В НАЛИЧИИ';
-        modalBadge.style.display = 'block';
-      }
-    }
+    if (modalBrand) modalBrand.textContent = brandText;
+    if (modalTitle) modalTitle.textContent = titleText;
+    if (modalDesc) modalDesc.textContent = descText;
+    if (modalPrice) modalPrice.innerHTML = priceHtml;
+    if (modalOldPrice) modalOldPrice.textContent = oldPriceText;
+    if (modalBadge) modalBadge.textContent = badgeText;
 
     if (modalTags) {
       modalTags.innerHTML = '';
@@ -211,62 +205,75 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    if (modalThumbs) modalThumbs.innerHTML = '';
-
-    if (currentModalImages.length > 1) {
-      if (modalPrevBtn) modalPrevBtn.classList.remove('hidden');
-      if (modalNextBtn) modalNextBtn.classList.remove('hidden');
-      if (modalCounter) modalCounter.classList.remove('hidden');
-      if (modalThumbs) {
-        modalThumbs.classList.remove('hidden');
+    if (modalThumbs) {
+      modalThumbs.innerHTML = '';
+      if (currentModalImages.length > 1) {
         currentModalImages.forEach((imgSrc, idx) => {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = `modal-thumb-btn ${idx === 0 ? 'active' : ''}`;
-          btn.setAttribute('aria-label', `Ракурс ${idx + 1}`);
-          const img = document.createElement('img');
-          img.src = imgSrc;
-          img.alt = `Миниатюра ${idx + 1}`;
-          btn.appendChild(img);
-          btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            setModalImage(idx);
-          });
-          modalThumbs.appendChild(btn);
+          const thumb = document.createElement('div');
+          thumb.className = `modal-thumb ${idx === 0 ? 'is-active' : ''}`;
+          thumb.innerHTML = `<img src="${imgSrc}" alt="" loading="lazy">`;
+          thumb.addEventListener('click', () => setModalImage(idx));
+          modalThumbs.appendChild(thumb);
         });
+        modalThumbs.style.display = 'flex';
+      } else {
+        modalThumbs.style.display = 'none';
       }
-    } else {
-      if (modalPrevBtn) modalPrevBtn.classList.add('hidden');
-      if (modalNextBtn) modalNextBtn.classList.add('hidden');
-      if (modalCounter) modalCounter.classList.add('hidden');
-      if (modalThumbs) modalThumbs.classList.add('hidden');
     }
 
+    if (currentModalImages.length > 1) {
+      if (modalPrevBtn) modalPrevBtn.style.display = 'flex';
+      if (modalNextBtn) modalNextBtn.style.display = 'flex';
+      if (modalCounter) modalCounter.style.display = 'block';
+    } else {
+      if (modalPrevBtn) modalPrevBtn.style.display = 'none';
+      if (modalNextBtn) modalNextBtn.style.display = 'none';
+      if (modalCounter) modalCounter.style.display = 'none';
+    }
+
+    // Pre-filled messenger links for maximum conversion
+    const inquiryText = `Здравствуйте! Меня интересует: "${titleText}" (${cleanPrice}). Подскажите точную стоимость очков с линзами по моим диоптриям и в каком салоне оправа в наличии на примерку?`;
+
+    if (modalWaBtn) {
+      modalWaBtn.href = `https://wa.me/79090997774?text=${encodeURIComponent(inquiryText)}`;
+    }
     if (modalVkBtn) {
       modalVkBtn.href = 'https://vk.me/uraloptikm';
+    }
+    if (modalMaxBtn) {
+      modalMaxBtn.href = 'https://max.ru/join/PMF1tS2N4imBxetGMkp3HiLltOjBB8AHs0RBKVmGBi0';
     }
 
     setModalImage(0);
 
-    productModal.classList.add('active');
+    productModal.classList.add('is-open', 'active');
     productModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
   function closeProductModal() {
     if (!productModal) return;
-    productModal.classList.remove('active');
+    productModal.classList.remove('is-open', 'active');
     productModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
 
-  productCards.forEach(card => {
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('a') || e.target.closest('button')) {
+  // Delegated click on all product cards and view buttons
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-view-product, .btn-check-stock');
+    if (btn) {
+      e.preventDefault();
+      const card = btn.closest('.product-card');
+      if (card) {
+        openProductModal(card);
         return;
       }
+    }
+
+    const card = e.target.closest('.product-card');
+    if (card && !e.target.closest('a')) {
       openProductModal(card);
-    });
+    }
   });
 
   if (modalClose) modalClose.addEventListener('click', closeProductModal);
@@ -294,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('keydown', (e) => {
-    if (!productModal || !productModal.classList.contains('active')) return;
+    if (!productModal || (!productModal.classList.contains('active') && !productModal.classList.contains('is-open'))) return;
     if (e.key === 'Escape') {
       closeProductModal();
     } else if (e.key === 'ArrowLeft') {
@@ -598,5 +605,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
 });
