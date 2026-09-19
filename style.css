@@ -647,7 +647,32 @@ button, input {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 14%;
+  display: block;
+}
+
+.hero-logo-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  padding: 4px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
   display: block;
 }
 
@@ -2278,9 +2303,16 @@ button, input {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center 12%;
     display: block;
     transform: none;
+  }
+  .hero-logo-badge {
+    top: 14px;
+    left: 14px;
+    width: 72px;
+    height: 72px;
+    padding: 3px;
   }
 
   .promotions-section,
