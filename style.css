@@ -545,17 +545,16 @@ button, input {
 }
 
 .stat-chip {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
-  padding: 10px 8px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  gap: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .stat-chip:hover {
@@ -585,8 +584,8 @@ button, input {
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 600;
-  padding: 18px 36px;
-  border-radius: 4px;
+  padding: 16px 32px;
+  border-radius: 12px;
   box-shadow: 0 4px 14px rgba(197, 34, 34, 0.25);
   transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -607,8 +606,8 @@ button, input {
   align-items: center;
   border: 1px solid #D1D5DB;
   background-color: var(--color-white);
-  padding: 18px 32px;
-  border-radius: 4px;
+  padding: 16px 28px;
+  border-radius: 12px;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.95rem;
