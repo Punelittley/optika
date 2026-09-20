@@ -2087,22 +2087,21 @@ button, input {
 }
 
 /* ==========================================================================
-   ROBUST & ELEGANT 4-COLUMN FOOTER
+   CLEAN & MINIMAL WHITE FOOTER
    ========================================================================== */
 .footer {
-  background-color: #0F172A;
-  color: #E2E8F0;
-  padding: 56px 0 28px;
-  border-top: 1px solid #1E293B;
+  background-color: #FFFFFF;
+  color: #334155;
+  padding: 44px 0 20px;
+  border-top: 1px solid #E2E8F0;
   position: relative;
-  overflow: hidden;
 }
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1.15fr 1.35fr;
-  gap: 40px;
-  margin-bottom: 48px;
+  grid-template-columns: 1.35fr 1fr 1.15fr;
+  gap: 44px;
+  margin-bottom: 32px;
 }
 
 .footer-col {
@@ -2112,39 +2111,115 @@ button, input {
 
 .footer-logo {
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .footer-logo-img {
-  height: 48px;
+  height: 42px;
   width: auto;
   object-fit: contain;
-  background: #FFFFFF;
-  padding: 4px 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .footer-brand-desc {
   font-size: 0.88rem;
-  line-height: 1.6;
-  color: #94A3B8;
-  margin-bottom: 16px;
+  line-height: 1.55;
+  color: #64748B;
+  margin-bottom: 14px;
 }
 
 .footer-license-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   font-size: 0.76rem;
   font-weight: 600;
-  color: #CBD5E1;
-  background: rgba(30, 41, 59, 0.7);
+  color: #475569;
+  background: #F8FAFC;
   padding: 6px 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
   width: fit-content;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--color-red);
+  border-radius: 2px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer-links-list a {
+  font-size: 0.88rem;
+  color: #64748B;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: var(--color-red);
+  transform: translateX(3px);
+}
+
+.footer-contact-block {
+  margin-bottom: 14px;
+}
+
+.footer-main-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #0F172A;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-bottom: 4px;
+}
+
+.footer-main-phone:hover {
+  color: var(--color-red);
+}
+
+.phone-pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  animation: pulse-dot 2s infinite;
+}
+
+.footer-schedule-text {
+  font-size: 0.82rem;
+  color: #64748B;
+  display: block;
 }
 
 .footer-social-row {
@@ -2159,9 +2234,9 @@ button, input {
   align-items: center;
   gap: 7px;
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 8px 14px;
+  padding: 9px 15px;
   border-radius: 8px;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
@@ -2169,135 +2244,23 @@ button, input {
 
 .footer-social-btn.btn-vk {
   background: #0077FF;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .footer-social-btn.btn-vk:hover {
   background: #0066DB;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 119, 255, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
 }
 
 .footer-social-btn.btn-max {
   background: linear-gradient(135deg, #0284C7 0%, #2563EB 100%);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .footer-social-btn.btn-max:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
-}
-
-.footer-col-title {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 18px;
-  letter-spacing: 0.3px;
-  position: relative;
-  padding-bottom: 8px;
-}
-
-.footer-col-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 28px;
-  height: 2px;
-  background: var(--color-red);
-  border-radius: 2px;
-}
-
-.footer-links-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links-list a {
-  font-size: 0.86rem;
-  color: #94A3B8;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  display: inline-block;
-}
-
-.footer-links-list a:hover {
-  color: #FFFFFF;
-  transform: translateX(4px);
-}
-
-.footer-main-phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  margin-bottom: 6px;
-}
-
-.footer-main-phone:hover {
-  color: var(--color-yellow);
-}
-
-.phone-pulse-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #10B981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
-  animation: pulse-dot 2s infinite;
-}
-
-.footer-schedule-text {
-  font-size: 0.82rem;
-  color: #94A3B8;
-  margin-bottom: 18px;
-  display: block;
-}
-
-.salons-mini-heading {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #CBD5E1;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.salons-mini-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.salon-mini-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #94A3B8;
-  background: rgba(30, 41, 59, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 4px 9px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.salon-mini-tag:hover {
-  color: #FFFFFF;
-  border-color: var(--color-red);
-  background: rgba(197, 34, 34, 0.15);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 /* Footer Bottom Ribbon */
@@ -2305,40 +2268,40 @@ button, input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  border-top: 1px solid #1E293B;
-  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #F1F5F9;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .footer-copy-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   font-size: 0.78rem;
-  color: #64748B;
+  color: #94A3B8;
 }
 
 .footer-medical-warning {
   font-size: 0.74rem;
-  color: #94A3B8;
+  color: #64748B;
   font-style: italic;
 }
 
 .footer-scroll-top-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(30, 41, 59, 0.9);
-  color: #E2E8F0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 8px 16px;
+  gap: 6px;
+  background: #F8FAFC;
+  color: #475569;
+  border: 1px solid #CBD5E1;
+  padding: 7px 14px;
   border-radius: 8px;
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .footer-scroll-top-btn:hover {
@@ -2346,32 +2309,29 @@ button, input {
   color: #FFFFFF;
   border-color: var(--color-red);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(197, 34, 34, 0.3);
+  box-shadow: 0 4px 12px rgba(197, 34, 34, 0.25);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .footer-top-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
   .footer {
-    padding: 40px 0 24px;
+    padding: 32px 0 18px;
   }
   .footer-top-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 32px;
-  }
-  .footer-col-title {
-    margin-bottom: 12px;
+    gap: 22px;
+    margin-bottom: 24px;
   }
   .footer-bottom-ribbon {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
   }
   .footer-scroll-top-btn {
     width: 100%;
