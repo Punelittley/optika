@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=20260920-v4">
+  <link rel="stylesheet" href="style.css?v=20260920-v5">
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -152,7 +152,7 @@
   </section>
 
   <!-- === ЯРКИЕ ТРЕНДЫ 2026: ВЗГЛЯД НА МИР ЯРЧЕ === -->
-  <section class="vibrant-trend-bar">
+  <section class="vibrant-trend-bar reveal">
     <div class="container">
       <div class="vibrant-trend-header">
         <div class="vibrant-pill-tag">🔥 ТРЕНДЫ 2026 · ВЗГЛЯД НА МИР ЯРЧЕ</div>
@@ -225,7 +225,7 @@
     </div>
   </section>
 
-  <section class="promotions-section" id="promotions">
+  <section class="promotions-section reveal" id="promotions">
     <div class="container">
       <div class="section-title-row">
         <div>
@@ -355,7 +355,7 @@
     </div>
   </section>
 
-  <section class="products-section" id="catalog">
+  <section class="products-section reveal" id="catalog">
     <div class="container">
       <div class="section-title-row">
         <div>
@@ -379,7 +379,7 @@
         </div>
       </div>
 
-      <div class="products-grid" id="productsGrid">
+      <div class="products-grid reveal-stagger" id="productsGrid">
 
         <!-- === СПЕЦИАЛЬНЫЕ ПОЗИЦИИ ПО ПРАЙСУ САЛОНА === -->
         <div class="product-card" data-category="lenses discount">
@@ -2544,7 +2544,7 @@
     </div>
   </section>
 
-  <section class="about-section-styled" id="about">
+  <section class="about-section-styled reveal" id="about">
     <div class="container">
       <div class="brands-split-container">
         <div class="brands-text-column">
@@ -2622,9 +2622,9 @@
     </div>
   </section>
 
-  <section class="advantages-bar">
+  <section class="advantages-bar reveal">
     <div class="container">
-      <div class="advantages-grid">
+      <div class="advantages-grid reveal-stagger">
         <div class="advantage-item">
           <div class="advantage-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -2667,7 +2667,7 @@
     </div>
   </section>
 
-  <section class="reviews-section" id="reviews">
+  <section class="reviews-section reveal" id="reviews">
     <div class="container">
       <div class="section-title-row reviews-header-row">
         <div>
@@ -2946,7 +2946,7 @@
     </div>
   </section>
 
-  <section class="salons-section" id="salons">
+  <section class="salons-section reveal" id="salons">
     <div class="container">
       <div class="section-title-row">
         <div>
@@ -3040,153 +3040,203 @@
   </section>
 
   <footer class="footer" id="contacts">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <a href="#" class="logo">
-          <img src="logo.png" alt="УРАЛ-ОПТИКА" class="site-logo-img">
-        </a>
-        <span class="footer-tagline">«Урал-Оптика» — мы заботимся о вас и о вашем зрении ❤️</span>
-      </div>
-
-      <div class="footer-nav">
-        <ul class="footer-nav-list">
-          <li><a href="#promotions">Акции</a></li>
-          <li><a href="#catalog">Каталог</a></li>
-          <li><a href="#about">О компании</a></li>
-          <li><a href="#reviews">Отзывы</a></li>
-          <li><a href="#salons">Салоны</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contacts">
-        <a href="tel:+79090997774" class="footer-phone-link">
-          <span>📞 +7 (909) 099-77-74</span>
-        </a>
-        <div class="footer-btns-row">
-          <a href="https://max.ru/join/PMF1tS2N4imBxetGMkp3HiLltOjBB8AHs0RBKVmGBi0" target="_blank" rel="noopener" class="footer-max-btn">
-            <span>Чат в MAX</span>
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & About -->
+        <div class="footer-col footer-col-brand">
+          <a href="#" class="footer-logo">
+            <img src="logo.png" alt="УРАЛ-ОПТИКА" class="footer-logo-img">
           </a>
-          <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="footer-vk-btn">
-            <span>Написать в VK</span>
-          </a>
+          <p class="footer-brand-desc">
+            Сеть из 7 специализированных салонов оптики и собственная лицензированная мастерская в Магнитогорске. Мы заботимся о вас и о вашем зрении с 2005 года.
+          </p>
+          <div class="footer-license-badge">
+            <span class="license-icon">🛡️</span>
+            <span>Медицинская лицензия № ЛО-74-01-002844</span>
+          </div>
+          <div class="footer-social-row">
+            <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="footer-social-btn btn-vk">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M15.684 0H8.316C2.992 0 0 2.992 0 8.316v7.368C0 21.008 2.992 24 8.316 24h7.368C21.008 24 24 21.008 24 15.684V8.316C24 2.992 21.008 0 15.684 0zm3.602 17.354h-1.838c-.696 0-.91-.555-2.164-1.813-1.09-1.066-1.573-1.203-1.84-1.203-.374 0-.48.107-.48.62v1.656c0 .445-.143.74-1.319.74-1.942 0-4.098-1.18-5.617-3.376-2.296-3.23-2.92-5.67-2.92-6.17 0-.27.107-.518.62-.518h1.838c.463 0 .633.214.81.714.891 2.585 2.388 4.85 3.01 4.85.232 0 .338-.107.338-.696v-2.71c-.071-1.23-.713-1.338-.713-1.782 0-.214.178-.428.463-.428h2.887c.392 0 .534.214.534.677v3.655c0 .392.178.534.285.534.232 0 .428-.142.856-.57 1.319-1.48 2.263-3.743 2.263-3.743.125-.268.338-.482.802-.482h1.838c.552 0 .676.285.552.677-.232.748-1.872 3.245-2.585 4.207-.214.285-.303.428 0 .82.214.285.927.91 1.408 1.48 1.105 1.283 1.943 2.37 2.174 3.12.196.605-.125.926-.677.926z"/>
+              </svg>
+              <span>Сообщество в VK</span>
+            </a>
+            <a href="https://max.ru/join/PMF1tS2N4imBxetGMkp3HiLltOjBB8AHs0RBKVmGBi0" target="_blank" rel="noopener" class="footer-social-btn btn-max">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              <span>Канал MAX</span>
+            </a>
+          </div>
         </div>
-        <span class="footer-hours">Салоны: 10:00 – 19:00 / 20:00</span>
+
+        <!-- Col 2: Catalog Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Каталог и акции</h4>
+          <ul class="footer-links-list">
+            <li><a href="#promotions">Акции и скидки сезона 🔥</a></li>
+            <li><a href="#catalog">Медицинские оправы</a></li>
+            <li><a href="#catalog">Солнцезащитные очки</a></li>
+            <li><a href="#catalog">Очковые линзы SHAMIR и BBGR</a></li>
+            <li><a href="#catalog">Контактные линзы и растворы</a></li>
+            <li><a href="#catalog">Футляры и аксессуары</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Laboratory -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Услуги и сервис</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">Бесплатная диагностика зрения</a></li>
+            <li><a href="#about">Срочное изготовление от 20 минут</a></li>
+            <li><a href="#about">Лицензированная мастерская и ремонт</a></li>
+            <li><a href="#catalog">Очки для водителей «Антифары»</a></li>
+            <li><a href="#catalog">Компьютерные линзы Blue-Block</a></li>
+            <li><a href="#reviews">Отзывы клиентов (рейтинг 4.9 ★)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Salons & Contacts -->
+        <div class="footer-col footer-col-contacts">
+          <h4 class="footer-col-title">Салоны и связь</h4>
+          <div class="footer-contact-block">
+            <a href="tel:+79090997774" class="footer-main-phone">
+              <span class="phone-pulse-dot"></span>
+              <span>8 (909) 099-77-74</span>
+            </a>
+            <span class="footer-schedule-text">Ежедневно: 10:00 – 19:00 / 20:00</span>
+          </div>
+
+          <div class="footer-salons-mini-list">
+            <span class="salons-mini-heading">7 салонов в Магнитогорске:</span>
+            <div class="salons-mini-tags">
+              <a href="#salons" class="salon-mini-tag">пр. Ленина, 133</a>
+              <a href="#salons" class="salon-mini-tag">Карла Маркса, 164</a>
+              <a href="#salons" class="salon-mini-tag">пр. Ленина, 80</a>
+              <a href="#salons" class="salon-mini-tag">ул. Труда, 37А</a>
+              <a href="#salons" class="salon-mini-tag">Зеленый Лог</a>
+              <a href="#salons" class="salon-mini-tag">ул. Завенягина, 10А</a>
+              <a href="#salons" class="salon-mini-tag">ул. Вокзальная, 100</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх">↑</button>
+      <!-- Footer Bottom Ribbon -->
+      <div class="footer-bottom-ribbon">
+        <div class="footer-copy-text">
+          <span>© 2005–2026 Сеть салонов «Урал-Оптика». Все права защищены.</span>
+          <span class="footer-medical-warning">Имеются противопоказания. Необходима консультация специалиста.</span>
+        </div>
+        <button type="button" class="footer-scroll-top-btn" id="scrollTopBtn" aria-label="Вернуться наверх">
+          <span>Наверх</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+      </div>
     </div>
   </footer>
-
 
   <!-- МОДАЛЬНОЕ ОКНО ПРОСМОТРА ТОВАРА С ГАЛЕРЕЕЙ ФОТО -->
   <div class="product-modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="product-modal-container">
       <button class="product-modal-close" id="productModalClose" aria-label="Закрыть окно">
-        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
 
       <div class="product-modal-body">
-        <!-- Галерея фото -->
+        <!-- Галерея фото (Левая колонка) -->
         <div class="product-modal-gallery">
           <div class="product-modal-main-img-wrap">
             <span class="product-modal-badge" id="modalBadge">В НАЛИЧИИ</span>
             <img src="" alt="" id="modalMainImg" class="product-modal-main-img">
+            
             <button class="modal-gallery-nav modal-gallery-prev" id="modalGalleryPrev" aria-label="Предыдущее фото">
-              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>
             </button>
             <button class="modal-gallery-nav modal-gallery-next" id="modalGalleryNext" aria-label="Следующее фото">
-              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
             <div class="modal-photo-counter" id="modalPhotoCounter">1 / 1</div>
           </div>
+          
           <div class="product-modal-thumbs" id="modalThumbs"></div>
+
+          <!-- Гарантии качества в левой колонке -->
+          <div class="modal-quality-ribbon">
+            <div class="quality-item">
+              <span class="quality-icon">⚡</span>
+              <span>Изготовление от 20 мин</span>
+            </div>
+            <div class="quality-item">
+              <span class="quality-icon">👓</span>
+              <span>Примерка в 7 салонах</span>
+            </div>
+            <div class="quality-item">
+              <span class="quality-icon">🔬</span>
+              <span>0 ₽ диагностика</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Информация о товаре -->
+        <!-- Информация о товаре (Правая колонка) -->
         <div class="product-modal-info">
           <div class="product-modal-header">
             <span class="product-modal-brand" id="modalBrand">УРАЛ-ОПТИКА</span>
             <h2 class="product-modal-title" id="modalTitle">Название товара</h2>
           </div>
 
+          <!-- Карточка цены, наличия и быстрого действия -->
           <div class="product-modal-price-box">
-            <div class="product-modal-price-row">
-              <span class="product-modal-price" id="modalPrice">от 2 500 ₽</span>
-              <span class="product-modal-old-price" id="modalOldPrice"></span>
+            <div class="price-box-header">
+              <div class="product-modal-price-row">
+                <span class="product-modal-price" id="modalPrice">от 2 500 ₽</span>
+                <span class="product-modal-old-price" id="modalOldPrice"></span>
+              </div>
+              <span class="product-modal-availability">
+                <span class="avail-dot"></span>
+                В наличии в салонах «Урал-Оптика»
+              </span>
             </div>
-            <span class="product-modal-availability">
-              <span class="avail-dot"></span>
-              В наличии в салонах «Урал-Оптика» (Магнитогорск)
-            </span>
-          </div>
 
-          <div class="product-modal-pricing-notice">
-            <div class="notice-title">💡 Как формируется точная стоимость?</div>
-            <p>Итоговая стоимость очков рассчитывается индивидуально в зависимости от ваших параметров зрения и выбранных очковых линз (антибликовые, астигматические, фотохромные или для компьютера). <strong>Напишите нам — рассчитаем точную цену за 1 минуту!</strong></p>
-          </div>
-
-          <div class="product-modal-tags" id="modalTags"></div>
-
-          <div class="product-modal-desc-box">
-            <h4 class="product-modal-subtitle">О товаре</h4>
-            <p class="product-modal-desc" id="modalDesc"></p>
-          </div>
-
-          <div class="product-modal-benefits">
-            <div class="modal-benefit-item">
-              <span class="benefit-icon">⚡</span>
-              <span>Изготовление от 15–20 минут в собственной мастерской</span>
-            </div>
-            <div class="modal-benefit-item">
-              <span class="benefit-icon">👁</span>
-              <span>0 ₽ диагностика зрения оптометристом при заказе</span>
-            </div>
-            <div class="modal-benefit-item">
-              <span class="benefit-icon">📍</span>
-              <span>Бесплатная примерка в любом из 7 салонов Магнитогорска</span>
-            </div>
-          </div>
-
-          <div class="product-modal-actions-box">
-            <div class="actions-label">Узнать точную стоимость и забронировать:</div>
-            <div class="product-modal-actions">
-              <a href="#" target="_blank" rel="noopener" class="btn-modal-wa" id="modalWaBtn">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M17.472 14.382c-.301-.15-1.782-.879-2.058-.98-.276-.1-.476-.15-.677.15-.2.301-.776.98-.952 1.18-.175.201-.351.226-.652.075-.3-.15-1.267-.467-2.414-1.489-.893-.795-1.496-1.777-1.672-2.078-.175-.301-.019-.464.132-.614.135-.135.301-.351.451-.527.15-.176.2-.301.301-.502.1-.201.05-.376-.025-.526-.075-.15-.677-1.631-.928-2.232-.244-.585-.492-.506-.677-.515l-.577-.01c-.2 0-.526.075-.802.376s-1.053 1.029-1.053 2.509 1.078 2.909 1.229 3.11c.15.2 2.12 3.238 5.136 4.541.717.31 1.277.495 1.713.633.72.228 1.375.196 1.893.118.577-.087 1.782-.728 2.033-1.431.251-.703.251-1.305.176-1.43-.075-.126-.276-.201-.577-.351z"/>
-                  <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.116.55 4.184 1.597 6.002L.055 24l6.177-1.621a11.97 11.97 0 0 0 5.772 1.48h.005c6.626 0 12.004-5.378 12.004-12.004C24.013 5.378 18.635 0 12.004 0zm0 21.968h-.004a9.96 9.96 0 0 1-5.074-1.39l-.364-.216-3.771.989 1.006-3.676-.237-.377A9.948 9.948 0 0 1 2.04 12.004C2.04 6.51 6.51 2.04 12.004 2.04c2.66 0 5.162 1.036 7.042 2.918 1.88 1.882 2.915 4.385 2.914 7.046 0 5.494-4.471 9.964-9.956 9.964z"/>
-                </svg>
-                <span>Написать в WhatsApp</span>
-              </a>
-
+            <!-- Главные кнопки связи -->
+            <div class="product-modal-quick-actions">
               <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="btn-modal-vk" id="modalVkBtn">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M15.684 0H8.316C2.992 0 0 2.992 0 8.316v7.368C0 21.008 2.992 24 8.316 24h7.368C21.008 24 24 21.008 24 15.684V8.316C24 2.992 21.008 0 15.684 0zm3.602 17.354h-1.838c-.696 0-.91-.555-2.164-1.813-1.09-1.066-1.573-1.203-1.84-1.203-.374 0-.48.107-.48.62v1.656c0 .445-.143.74-1.319.74-1.942 0-4.098-1.18-5.617-3.376-2.296-3.23-2.92-5.67-2.92-6.17 0-.27.107-.518.62-.518h1.838c.463 0 .633.214.81.714.891 2.585 2.388 4.85 3.01 4.85.232 0 .338-.107.338-.696v-2.71c-.071-1.23-.713-1.338-.713-1.782 0-.214.178-.428.463-.428h2.887c.392 0 .534.214.534.677v3.655c0 .392.178.534.285.534.232 0 .428-.142.856-.57 1.319-1.48 2.263-3.743 2.263-3.743.125-.268.338-.482.802-.482h1.838c.552 0 .676.285.552.677-.232.748-1.872 3.245-2.585 4.207-.214.285-.303.428 0 .82.214.285.927.91 1.408 1.48 1.105 1.283 1.943 2.37 2.174 3.12.196.605-.125.926-.677.926z"/>
                 </svg>
-                <span>Написать в VK</span>
+                <span>Узнать цену и наличие в VK</span>
               </a>
 
-              <a href="https://max.ru/join/PMF1tS2N4imBxetGMkp3HiLltOjBB8AHs0RBKVmGBi0" target="_blank" rel="noopener" class="btn-modal-max" id="modalMaxBtn">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                </svg>
-                <span>Чат в MAX</span>
-              </a>
-
-              <a href="tel:+79090997774" class="btn-modal-phone">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span>Позвонить +7 (909) 099-77-74</span>
-              </a>
+              <div class="modal-secondary-btns">
+                <a href="tel:+79090997774" class="btn-modal-phone">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>8 (909) 099-77-74</span>
+                </a>
+                <a href="https://max.ru/join/PMF1tS2N4imBxetGMkp3HiLltOjBB8AHs0RBKVmGBi0" target="_blank" rel="noopener" class="btn-modal-max" id="modalMaxBtn">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  <span>Чат MAX</span>
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="btn-modal-wa" id="modalWaBtn" style="display:none;">WhatsApp</a>
+              </div>
             </div>
+          </div>
+
+          <!-- Аккуратный блок пояснения стоимости -->
+          <div class="product-modal-pricing-notice">
+            <span class="notice-icon">💡</span>
+            <p><strong>Бесплатная проверка зрения</strong> оптометристом при заказе очков. Точная стоимость рассчитывается индивидуально под ваши диоптрии и очковые линзы. Напишите нам — рассчитаем за 1 минуту!</p>
+          </div>
+
+          <!-- Теги характеристик -->
+          <div class="product-modal-tags" id="modalTags"></div>
+
+          <!-- Описание товара -->
+          <div class="product-modal-desc-box">
+            <h4 class="product-modal-subtitle">О модели</h4>
+            <p class="product-modal-desc" id="modalDesc"></p>
           </div>
         </div>
       </div>
