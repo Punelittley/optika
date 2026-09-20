@@ -722,4 +722,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // === VIBRANT TRENDS CAROUSEL (MOBILE DOTS & SWIPE SYNC) ===
+  const vibrantGrid = document.getElementById('vibrantGrid');
+  const vibrantDots = document.getElementById('vibrantDots');
+  if (vibrantGrid && vibrantDots) {
+    const dots = vibrantDots.querySelectorAll('.vibrant-dot');
+    const cards = vibrantGrid.querySelectorAll('.vibrant-card');
+
+    function updateActiveVibrantDot() {
+      if (window.innerWidth > 768) return;
+      const scrollLeft = vibrantGrid.scrollLeft;
+      const card = cards[0];
+      if (!card) return;
+      const cardWidth = card.offsetWidth;
+      const gap = 14;
+      const activeIdx = Math.min(Math.round(scrollLeft / (cardWidth + gap)), dots.length - 1);
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === activeIdx);
+      });
+    }
+
+    let isScrolling = false;
+    vibrantGrid.addEventListener('scroll', () => {
+      if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+          updateActiveVibrantDot();
+          isScrolling = false;
+        });
+        isScrolling = true;
+      }
+    }, { passive: true });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        const card = cards[idx];
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        }
+      });
+    });
+  }
 });
