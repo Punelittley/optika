@@ -605,4 +605,121 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // === REVIEWS SLIDER INITIALIZATION ===
+  const reviewsTrack = document.getElementById('reviewsSliderTrack');
+  const reviewsSlides = document.querySelectorAll('.review-slide');
+  const reviewsPrevBtn = document.getElementById('reviewsPrev');
+  const reviewsNextBtn = document.getElementById('reviewsNext');
+  const reviewsDotsContainer = document.getElementById('reviewsDots');
+
+  if (reviewsTrack && reviewsSlides.length > 0) {
+    let currentReviewSlide = 0;
+
+    function getReviewsPerView() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 3;
+    }
+
+    function getMaxReviewIndex() {
+      const perView = getReviewsPerView();
+      return Math.max(0, reviewsSlides.length - perView);
+    }
+
+    function renderReviewDots() {
+      if (!reviewsDotsContainer) return;
+      reviewsDotsContainer.innerHTML = '';
+      const maxIdx = getMaxReviewIndex();
+      for (let i = 0; i <= maxIdx; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot' + (i === currentReviewSlide ? ' active' : '');
+        dot.setAttribute('aria-label', 'Отзыв ' + (i + 1));
+        dot.addEventListener('click', () => {
+          goToReviewSlide(i);
+        });
+        reviewsDotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateReviewsSlider() {
+      const maxIdx = getMaxReviewIndex();
+      if (currentReviewSlide > maxIdx) currentReviewSlide = maxIdx;
+      if (currentReviewSlide < 0) currentReviewSlide = 0;
+
+      const perView = getReviewsPerView();
+      const slideWidthPercent = 100 / perView;
+      const offsetPercent = currentReviewSlide * slideWidthPercent;
+
+      reviewsTrack.style.transform = 'translateX(-' + offsetPercent + '%)';
+
+      if (reviewsDotsContainer) {
+        const dots = reviewsDotsContainer.querySelectorAll('.slider-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentReviewSlide);
+        });
+      }
+    }
+
+    function goToReviewSlide(index) {
+      currentReviewSlide = index;
+      updateReviewsSlider();
+    }
+
+    function nextReviewSlide() {
+      const maxIdx = getMaxReviewIndex();
+      if (currentReviewSlide >= maxIdx) {
+        currentReviewSlide = 0;
+      } else {
+        currentReviewSlide++;
+      }
+      updateReviewsSlider();
+    }
+
+    function prevReviewSlide() {
+      const maxIdx = getMaxReviewIndex();
+      if (currentReviewSlide <= 0) {
+        currentReviewSlide = maxIdx;
+      } else {
+        currentReviewSlide--;
+      }
+      updateReviewsSlider();
+    }
+
+    if (reviewsNextBtn) {
+      reviewsNextBtn.addEventListener('click', nextReviewSlide);
+    }
+
+    if (reviewsPrevBtn) {
+      reviewsPrevBtn.addEventListener('click', prevReviewSlide);
+    }
+
+    // Touch swipe for reviews slider
+    let rStartX = 0;
+    let rEndX = 0;
+    const rContainer = document.getElementById('reviewsSliderContainer');
+    if (rContainer) {
+      rContainer.addEventListener('touchstart', (e) => {
+        rStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      rContainer.addEventListener('touchend', (e) => {
+        rEndX = e.changedTouches[0].clientX;
+        const diff = rStartX - rEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) nextReviewSlide();
+          else prevReviewSlide();
+        }
+      }, { passive: true });
+    }
+
+    renderReviewDots();
+    updateReviewsSlider();
+
+    window.addEventListener('resize', () => {
+      renderReviewDots();
+      updateReviewsSlider();
+    });
+  }
+
 });

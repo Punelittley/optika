@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260920-slider">
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -2856,242 +2856,226 @@
 
   <section class="reviews-section" id="reviews">
     <div class="container">
-      <div class="reviews-header-block">
-        <div class="reviews-header-main">
+      <div class="section-title-row reviews-header-row">
+        <div>
           <div class="kicker-line">
             <span class="red-dash"></span>
             <span class="kicker-text">ОТЗЫВЫ КЛИЕНТОВ</span>
           </div>
           <h2 class="section-heading">Что говорят о нас наши клиенты</h2>
-          <p class="section-subheading">Честные отзывы жителей Магнитогорска о диагностике зрения, изготовлении очков и качестве оправ</p>
+          <p class="section-subheading">
+            ⭐ <strong>Рейтинг 4.9 из 5.0</strong> на основе 1 200+ отзывов в 2ГИС и Яндекс Картах
+          </p>
         </div>
 
-        <div class="reviews-rating-widget">
-          <div class="rating-big-box">
-            <span class="rating-num">4.9</span>
-            <div class="rating-stars-wrap">
-              <div class="stars-gold">★★★★★</div>
-              <span class="rating-label">Рейтинг в Магнитогорске</span>
+        <div class="reviews-nav-controls">
+          <button class="slider-arrow-static" id="reviewsPrev" aria-label="Предыдущие отзывы">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="slider-arrow-static" id="reviewsNext" aria-label="Следующие отзывы">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Слайдер отзывов -->
+      <div class="reviews-slider-wrap">
+        <div class="reviews-slider-track-container" id="reviewsSliderContainer">
+          <div class="reviews-slider-track" id="reviewsSliderTrack">
+
+            <!-- Review 1 -->
+            <div class="review-slide">
+              <div class="review-slide-card">
+                <div class="review-card-top">
+                  <div class="review-user-info">
+                    <div class="review-avatar avatar-rose">ЕВ</div>
+                    <div class="review-meta">
+                      <span class="review-author">Елена Васильева</span>
+                      <span class="review-date">2 недели назад · <span class="review-verified-tag">✓ Проверен</span></span>
+                    </div>
+                  </div>
+                  <span class="review-source-badge source-2gis">2ГИС</span>
+                </div>
+
+                <div class="review-stars-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-branch">📍 ул. Советская, 174</span>
+                </div>
+
+                <h3 class="review-card-title">Срочно изготовили астигматические очки за 25 минут!</h3>
+                <p class="review-text">
+                  Обращаюсь в «Урал-Оптику» уже в третий раз всей семьёй. Проверили зрение на современном аппарате, оптометрист очень внимательная, всё детально объяснила и помогла с выбором сложных астигматических линз. Очки были готовы прямо при мне всего за 25 минут в мастерской! Идеальная центровка, глазам легко и комфортно с первой секунды.
+                </p>
+
+                <div class="review-card-footer">
+                  <span class="review-tag">⚡ Срочно от 20 мин</span>
+                  <span class="review-recommend">👍 Рекомендует</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="rating-badges-row">
-            <span class="rating-platform-badge badge-2gis">
-              <span class="platform-dot"></span> 2ГИС <strong>4.9 ★</strong>
-            </span>
-            <span class="rating-platform-badge badge-yandex">
-              <span class="platform-dot"></span> Яндекс Карты <strong>4.9 ★</strong>
-            </span>
+
+            <!-- Review 2 -->
+            <div class="review-slide">
+              <div class="review-slide-card">
+                <div class="review-card-top">
+                  <div class="review-user-info">
+                    <div class="review-avatar avatar-slate">МР</div>
+                    <div class="review-meta">
+                      <span class="review-author">Михаил Романов</span>
+                      <span class="review-date">1 месяц назад · <span class="review-verified-tag">✓ Проверен</span></span>
+                    </div>
+                  </div>
+                  <span class="review-source-badge source-2gis">2ГИС</span>
+                </div>
+
+                <div class="review-stars-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-branch">📍 пр. Карла Маркса, 115</span>
+                </div>
+
+                <h3 class="review-card-title">Спасли любимую титановую оправу в собственной мастерской</h3>
+                <p class="review-text">
+                  Сломался флекс-заушник на дорогой оправе. В двух других местах города разводили руками и говорили «только покупать новую». Зашёл в Урал-Оптику на Карла Маркса: мастер внимательно осмотрел, сразу назвал точную цену и починил за 40 минут! Шов незаметный, сидит крепко. Здорово, что у сети своя лицензированная мастерская с опытными мастерами.
+                </p>
+
+                <div class="review-card-footer">
+                  <span class="review-tag">🛠 Ремонт любой сложности</span>
+                  <span class="review-recommend">👍 Рекомендует</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-slide">
+              <div class="review-slide-card">
+                <div class="review-card-top">
+                  <div class="review-user-info">
+                    <div class="review-avatar avatar-amber">АС</div>
+                    <div class="review-meta">
+                      <span class="review-author">Анна Смирнова</span>
+                      <span class="review-date">3 недели назад · <span class="review-verified-tag">✓ Проверен</span></span>
+                    </div>
+                  </div>
+                  <span class="review-source-badge source-yandex">Яндекс</span>
+                </div>
+
+                <div class="review-stars-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-branch">📍 ул. Завенягина, 10а (Мост-2)</span>
+                </div>
+
+                <h3 class="review-card-title">Бесплатная диагностика при заказе и огромный выбор оправ</h3>
+                <p class="review-text">
+                  Очень понравился салон в Мост-2. При заказе очков зрение проверили совершенно бесплатно на авторефрактометре. Консультант вежливая и тактичная, помогла перемерить около двадцати оправ, пока не нашли идеальную модель под мою форму лица. Цены прозрачные, линзы подобрали отличные, без навязывания лишних опций.
+                </p>
+
+                <div class="review-card-footer">
+                  <span class="review-tag">👁 0 ₽ диагностика зрения</span>
+                  <span class="review-recommend">👍 Рекомендует</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-slide">
+              <div class="review-slide-card">
+                <div class="review-card-top">
+                  <div class="review-user-info">
+                    <div class="review-avatar avatar-blue">ДК</div>
+                    <div class="review-meta">
+                      <span class="review-author">Дмитрий Ковалёв</span>
+                      <span class="review-date">Недавно · <span class="review-verified-tag">✓ Проверен</span></span>
+                    </div>
+                  </div>
+                  <span class="review-source-badge source-2gis">2ГИС</span>
+                </div>
+
+                <div class="review-stars-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-branch">📍 пр. Ленина, 146</span>
+                </div>
+
+                <h3 class="review-card-title">Лечебные детские линзы Essilor Stellest для сына</h3>
+                <p class="review-text">
+                  По рекомендации детского офтальмолога искали французские линзы Stellest для остановки прогрессирования близорукости у сына. В Урал-Оптике грамотно проконсультировали по рецепту, помогли с выбором прочной и лёгкой оправы, сделали хорошую скидку и быстро доставили заказ. Ребёнок носит в школе с удовольствием, зрение стабильно!
+                </p>
+
+                <div class="review-card-footer">
+                  <span class="review-tag">👶 Essilor Stellest • Дети</span>
+                  <span class="review-recommend">👍 Рекомендует</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-slide">
+              <div class="review-slide-card">
+                <div class="review-card-top">
+                  <div class="review-user-info">
+                    <div class="review-avatar avatar-emerald">ОП</div>
+                    <div class="review-meta">
+                      <span class="review-author">Ольга Полякова</span>
+                      <span class="review-date">1 месяц назад · <span class="review-verified-tag">✓ Проверен</span></span>
+                    </div>
+                  </div>
+                  <span class="review-source-badge source-yandex">Яндекс</span>
+                </div>
+
+                <div class="review-stars-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-branch">📍 ул. Пушкина, 21</span>
+                </div>
+
+                <h3 class="review-card-title">Компьютерные очки с синим фильтром BLUV — глаза не устают</h3>
+                <p class="review-text">
+                  Работаю за компьютером по 9 часов каждый день, к вечеру постоянно было ощущение сухости и жжения в глазах. Заказала в Урал-Оптике очки со специальным защитным покрытием BLUV. Эффект ощутила сразу: свет экранов больше не режет, глаза не слезятся, ушла головная боль. Очень благодарна сотрудникам за заботу и профессионализм!
+                </p>
+
+                <div class="review-card-footer">
+                  <span class="review-tag">💻 Защита BLUV для ПК</span>
+                  <span class="review-recommend">👍 Рекомендует</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-slide">
+              <div class="review-slide-card">
+                <div class="review-card-top">
+                  <div class="review-user-info">
+                    <div class="review-avatar avatar-graphite">СМ</div>
+                    <div class="review-meta">
+                      <span class="review-author">Сергей Мельников</span>
+                      <span class="review-date">2 месяца назад · <span class="review-verified-tag">✓ Проверен</span></span>
+                    </div>
+                  </div>
+                  <span class="review-source-badge source-2gis">2ГИС</span>
+                </div>
+
+                <div class="review-stars-row">
+                  <span class="review-stars">★★★★★</span>
+                  <span class="review-branch">📍 ул. Комсомольская, 34</span>
+                </div>
+
+                <h3 class="review-card-title">Тонированные солнцезащитные очки с диоптриями</h3>
+                <p class="review-text">
+                  Давно искал оптику, где качественно сделают солнцезащитные очки с диоптриями (минус 3.5). В Урал-Оптике подобрали модную оправу и установили линзы с градиентным затемнением и УФ-фильтром UV400. Выглядит стильно, за рулём солнце не слепит, картинка чёткая и контрастная. Отличный сервис!
+                </p>
+
+                <div class="review-card-footer">
+                  <span class="review-tag">🕶 Солнцезащитные с диоптриями</span>
+                  <span class="review-recommend">👍 Рекомендует</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="reviews-grid" id="reviewsGrid">
-        <!-- Review 1 -->
-        <div class="review-card" data-review-category="making">
-          <svg class="review-quote-bg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <div class="review-card-inner">
-            <div class="review-card-top">
-              <div class="review-user-info">
-                <div class="review-avatar avatar-rose">ЕВ</div>
-                <div class="review-meta">
-                  <span class="review-author">Елена Васильева</span>
-                  <span class="review-date">2 недели назад · <span class="review-verified-tag">✓ Проверен</span></span>
-                </div>
-              </div>
-              <span class="review-source-badge source-2gis">2ГИС</span>
-            </div>
+      <div class="slider-dots" id="reviewsDots"></div>
 
-            <div class="review-stars-row">
-              <span class="review-stars">★★★★★</span>
-              <span class="review-branch">📍 ул. Советская, 174</span>
-            </div>
-
-            <h3 class="review-card-title">Срочно изготовили астигматические очки за 25 минут!</h3>
-            <p class="review-text">
-              Обращаюсь в «Урал-Оптику» уже в третий раз всей семьёй. Проверили зрение на современном аппарате, оптометрист очень внимательная, всё детально объяснила и помогла с выбором сложных астигматических линз. Очки были готовы прямо при мне всего за 25 минут в мастерской! Идеальная центровка, глазам легко и комфортно с первой секунды.
-            </p>
-          </div>
-
-          <div class="review-card-footer">
-            <span class="review-tag">⚡ Срочно от 20 мин</span>
-            <span class="review-recommend">👍 Рекомендует</span>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="review-card" data-review-category="repair">
-          <svg class="review-quote-bg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <div class="review-card-inner">
-            <div class="review-card-top">
-              <div class="review-user-info">
-                <div class="review-avatar avatar-slate">МР</div>
-                <div class="review-meta">
-                  <span class="review-author">Михаил Романов</span>
-                  <span class="review-date">1 месяц назад · <span class="review-verified-tag">✓ Проверен</span></span>
-                </div>
-              </div>
-              <span class="review-source-badge source-2gis">2ГИС</span>
-            </div>
-
-            <div class="review-stars-row">
-              <span class="review-stars">★★★★★</span>
-              <span class="review-branch">📍 пр. Карла Маркса, 115</span>
-            </div>
-
-            <h3 class="review-card-title">Спасли любимую титановую оправу в собственной мастерской</h3>
-            <p class="review-text">
-              Сломался флекс-заушник на дорогой оправе. В двух других местах города разводили руками и говорили «только покупать новую». Зашёл в Урал-Оптику на Карла Маркса: мастер внимательно осмотрел, сразу назвал точную цену и починил за 40 минут! Шов незаметный, сидит крепко. Здорово, что у сети своя лицензированная мастерская с опытными мастерами.
-            </p>
-          </div>
-
-          <div class="review-card-footer">
-            <span class="review-tag">🛠 Ремонт любой сложности</span>
-            <span class="review-recommend">👍 Рекомендует</span>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="review-card" data-review-category="making">
-          <svg class="review-quote-bg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <div class="review-card-inner">
-            <div class="review-card-top">
-              <div class="review-user-info">
-                <div class="review-avatar avatar-amber">АС</div>
-                <div class="review-meta">
-                  <span class="review-author">Анна Смирнова</span>
-                  <span class="review-date">3 недели назад · <span class="review-verified-tag">✓ Проверен</span></span>
-                </div>
-              </div>
-              <span class="review-source-badge source-yandex">Яндекс</span>
-            </div>
-
-            <div class="review-stars-row">
-              <span class="review-stars">★★★★★</span>
-              <span class="review-branch">📍 ул. Завенягина, 10а (Мост-2)</span>
-            </div>
-
-            <h3 class="review-card-title">Бесплатная диагностика при заказе и огромный выбор оправ</h3>
-            <p class="review-text">
-              Очень понравился салон в Мост-2. При заказе очков зрение проверили совершенно бесплатно на авторефрактометре. Консультант вежливая и тактичная, помогла перемерить около двадцати оправ, пока не нашли идеальную модель под мою форму лица. Цены прозрачные, линзы подобрали отличные, без навязывания лишних опций.
-            </p>
-          </div>
-
-          <div class="review-card-footer">
-            <span class="review-tag">👁 0 ₽ диагностика зрения</span>
-            <span class="review-recommend">👍 Рекомендует</span>
-          </div>
-        </div>
-
-        <!-- Review 4 -->
-        <div class="review-card" data-review-category="kids">
-          <svg class="review-quote-bg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <div class="review-card-inner">
-            <div class="review-card-top">
-              <div class="review-user-info">
-                <div class="review-avatar avatar-blue">ДК</div>
-                <div class="review-meta">
-                  <span class="review-author">Дмитрий Ковалёв</span>
-                  <span class="review-date">Недавно · <span class="review-verified-tag">✓ Проверен</span></span>
-                </div>
-              </div>
-              <span class="review-source-badge source-2gis">2ГИС</span>
-            </div>
-
-            <div class="review-stars-row">
-              <span class="review-stars">★★★★★</span>
-              <span class="review-branch">📍 пр. Ленина, 146</span>
-            </div>
-
-            <h3 class="review-card-title">Лечебные детские линзы Essilor Stellest для сына</h3>
-            <p class="review-text">
-              По рекомендации детского офтальмолога искали французские линзы Stellest для остановки прогрессирования близорукости у сына. В Урал-Оптике грамотно проконсультировали по рецепту, помогли с выбором прочной и лёгкой оправы, сделали хорошую скидку и быстро доставили заказ. Ребёнок носит в школе с удовольствием, зрение стабильно!
-            </p>
-          </div>
-
-          <div class="review-card-footer">
-            <span class="review-tag">👶 Essilor Stellest • Дети</span>
-            <span class="review-recommend">👍 Рекомендует</span>
-          </div>
-        </div>
-
-        <!-- Review 5 -->
-        <div class="review-card" data-review-category="glasses">
-          <svg class="review-quote-bg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <div class="review-card-inner">
-            <div class="review-card-top">
-              <div class="review-user-info">
-                <div class="review-avatar avatar-emerald">ОП</div>
-                <div class="review-meta">
-                  <span class="review-author">Ольга Полякова</span>
-                  <span class="review-date">1 месяц назад · <span class="review-verified-tag">✓ Проверен</span></span>
-                </div>
-              </div>
-              <span class="review-source-badge source-yandex">Яндекс</span>
-            </div>
-
-            <div class="review-stars-row">
-              <span class="review-stars">★★★★★</span>
-              <span class="review-branch">📍 ул. Пушкина, 21</span>
-            </div>
-
-            <h3 class="review-card-title">Компьютерные очки с синим фильтром BLUV — глаза не устают</h3>
-            <p class="review-text">
-              Работаю за компьютером по 9 часов каждый день, к вечеру постоянно было ощущение сухости и жжения в глазах. Заказала в Урал-Оптике очки со специальным защитным покрытием BLUV. Эффект ощутила сразу: свет экранов больше не режет, глаза не слезятся, ушла головная боль. Очень благодарна сотрудникам за заботу и профессионализм!
-            </p>
-          </div>
-
-          <div class="review-card-footer">
-            <span class="review-tag">💻 Защита BLUV для ПК</span>
-            <span class="review-recommend">👍 Рекомендует</span>
-          </div>
-        </div>
-
-        <!-- Review 6 -->
-        <div class="review-card" data-review-category="glasses">
-          <svg class="review-quote-bg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <div class="review-card-inner">
-            <div class="review-card-top">
-              <div class="review-user-info">
-                <div class="review-avatar avatar-graphite">СМ</div>
-                <div class="review-meta">
-                  <span class="review-author">Сергей Мельников</span>
-                  <span class="review-date">2 месяца назад · <span class="review-verified-tag">✓ Проверен</span></span>
-                </div>
-              </div>
-              <span class="review-source-badge source-2gis">2ГИС</span>
-            </div>
-
-            <div class="review-stars-row">
-              <span class="review-stars">★★★★★</span>
-              <span class="review-branch">📍 ул. Комсомольская, 34</span>
-            </div>
-
-            <h3 class="review-card-title">Тонированные солнцезащитные очки с диоптриями</h3>
-            <p class="review-text">
-              Давно искал оптику, где качественно сделают солнцезащитные очки с диоптриями (минус 3.5). В Урал-Оптике подобрали модную оправу и установили линзы с градиентным затемнением и УФ-фильтром UV400. Выглядит стильно, за рулём солнце не слепит, картинка чёткая и контрастная. Отличный сервис!
-            </p>
-          </div>
-
-          <div class="review-card-footer">
-            <span class="review-tag">🕶 Солнцезащитные с диоптриями</span>
-            <span class="review-recommend">👍 Рекомендует</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reviews Bottom Action Ribbon -->
+      <!-- Reviews Bottom Ribbon -->
       <div class="reviews-bottom-ribbon">
         <div class="reviews-bottom-ribbon-text">
           <strong>Посетили наши салоны оптики?</strong>
