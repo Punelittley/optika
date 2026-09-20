@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=20260920-v8">
+  <link rel="stylesheet" href="style.css?v=20260920-v9">
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -2960,81 +2960,147 @@
         <a href="tel:+79090997774" class="view-all-link">Позвонить: 8 (909) 099-77-74</a>
       </div>
 
-      <div class="salons-grid">
-        
-        <div class="salon-minimal-card main-salon" data-salon-idx="0" style="cursor: pointer;">
-          <div class="salon-badge-yellow">Главный офис + Мастерская ⚡</div>
-          <h3 class="salon-title">ул. Карла Маркса, 42</h3>
-          <p class="salon-desc">Главный офис оптики и собственная мастерская. Диагностика зрения оптометристами, приём детского и взрослого офтальмолога, срочное изготовление очков. Ремонт очков любой сложности (пайка шарниров, замена носовых упоров, установка болтиков). Большой выбор оправ и солнцезащитных очков, очковые линзы всех известных мировых производителей (Essilor, Shamir, Carl Zeiss, BBGR, Neolook, Завод ОДВ).</p>
-          <div class="salon-meta">
-            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
-            <span class="salon-map-link">Показать на карте</span>
+      <div class="salons-layout-split">
+        <!-- Левая колонка: интерактивный список салонов -->
+        <div class="salons-list" id="salonsList">
+          
+          <div class="salon-minimal-card main-salon is-active" data-salon-idx="0">
+            <div class="salon-card-header">
+              <span class="salon-badge-gold">⭐ Главный офис + Мастерская</span>
+              <span class="salon-click-hint">Показать на карте 📍</span>
+            </div>
+            <h3 class="salon-title">ул. Карла Маркса, 42</h3>
+            <div class="salon-chips-row">
+              <span class="salon-chip chip-highlight">⚡ Изготовление от 20 мин</span>
+              <span class="salon-chip">👨‍⚕️ Приём офтальмолога</span>
+              <span class="salon-chip">🔬 Диагностика 0 ₽</span>
+              <span class="salon-chip">🛠 Ремонт любой сложности</span>
+            </div>
+            <div class="salon-meta">
+              <span class="salon-hours">🕒 Пн–Вс: 10:00 – 19:00</span>
+              <span class="salon-route-btn">Выбрать салон →</span>
+            </div>
           </div>
+
+          <div class="salon-minimal-card" data-salon-idx="5">
+            <div class="salon-card-header">
+              <span class="salon-badge-blue">🛍️ ТРК «МОСТ-2» · Работаем до 20:00</span>
+              <span class="salon-click-hint">Показать на карте 📍</span>
+            </div>
+            <h3 class="salon-title">ул. Завенягина, 10а</h3>
+            <div class="salon-chips-row">
+              <span class="salon-chip chip-late">🕒 До 20:00</span>
+              <span class="salon-chip">👓 1 500+ оправ</span>
+              <span class="salon-chip">👁️ Проверка зрения 0 ₽</span>
+              <span class="salon-chip">🕶️ Солнцезащитные</span>
+            </div>
+            <div class="salon-meta">
+              <span class="salon-hours">🕒 Пн–Вс: 10:00 – 20:00</span>
+              <span class="salon-route-btn">Выбрать салон →</span>
+            </div>
+          </div>
+
+          <div class="salon-minimal-card" data-salon-idx="4">
+            <div class="salon-card-header">
+              <span class="salon-badge-gray">🛍️ ТРК «Крытый рынок»</span>
+              <span class="salon-click-hint">Показать на карте 📍</span>
+            </div>
+            <h3 class="salon-title">ул. Карла Маркса, 74</h3>
+            <div class="salon-chips-row">
+              <span class="salon-chip">🕒 С 09:00 утра</span>
+              <span class="salon-chip">👁️ Диагностика зрения</span>
+              <span class="salon-chip">👓 Большой выбор оправ</span>
+            </div>
+            <div class="salon-meta">
+              <span class="salon-hours">🕒 Пн–Вс: 09:00 – 19:00</span>
+              <span class="salon-route-btn">Выбрать салон →</span>
+            </div>
+          </div>
+
+          <div class="salon-minimal-card" data-salon-idx="1">
+            <div class="salon-card-header">
+              <span class="salon-badge-gray">📍 Салон оптики</span>
+              <span class="salon-click-hint">Показать на карте 📍</span>
+            </div>
+            <h3 class="salon-title">ул. Советская, 137</h3>
+            <div class="salon-chips-row">
+              <span class="salon-chip">👁️ Диагностика зрения 0 ₽</span>
+              <span class="salon-chip">👓 Подбор оправ и линз</span>
+              <span class="salon-chip">⚡ Срочные заказы</span>
+            </div>
+            <div class="salon-meta">
+              <span class="salon-hours">🕒 Пн–Вс: 10:00 – 19:00</span>
+              <span class="salon-route-btn">Выбрать салон →</span>
+            </div>
+          </div>
+
+          <div class="salon-minimal-card" data-salon-idx="2">
+            <div class="salon-card-header">
+              <span class="salon-badge-gray">📍 Салон оптики</span>
+              <span class="salon-click-hint">Показать на карте 📍</span>
+            </div>
+            <h3 class="salon-title">ул. Советская, 174</h3>
+            <div class="salon-chips-row">
+              <span class="salon-chip">👁️ Проверка зрения</span>
+              <span class="salon-chip">👓 Медицинские оправы</span>
+              <span class="salon-chip">🕶️ Поляризационные очки</span>
+            </div>
+            <div class="salon-meta">
+              <span class="salon-hours">🕒 Пн–Вс: 10:00 – 19:00</span>
+              <span class="salon-route-btn">Выбрать салон →</span>
+            </div>
+          </div>
+
+          <div class="salon-minimal-card" data-salon-idx="3">
+            <div class="salon-card-header">
+              <span class="salon-badge-gray">📍 Салон оптики</span>
+              <span class="salon-click-hint">Показать на карте 📍</span>
+            </div>
+            <h3 class="salon-title">пр. Ленина, 146</h3>
+            <div class="salon-chips-row">
+              <span class="salon-chip">👓 Оправы от 2 500 ₽</span>
+              <span class="salon-chip">👁️ Оптометрист</span>
+              <span class="salon-chip">💧 Контактные линзы и капли</span>
+            </div>
+            <div class="salon-meta">
+              <span class="salon-hours">🕒 Пн–Вс: 10:00 – 19:00</span>
+              <span class="salon-route-btn">Выбрать салон →</span>
+            </div>
+          </div>
+
+          <div class="salon-minimal-card" data-salon-idx="6">
+            <div class="salon-card-header">
+              <span class="salon-badge-gray">🏭 Левый берег · ТРК «Техникум»</span>
+              <span class="salon-click-hint">Показать на карте 📍</span>
+            </div>
+            <h3 class="salon-title">ул. Пушкина, 21</h3>
+            <div class="salon-chips-row">
+              <span class="salon-chip">📍 Удобно для Левого берега</span>
+              <span class="salon-chip">👁️ Проверка зрения</span>
+              <span class="salon-chip">👓 Изготовление очков</span>
+            </div>
+            <div class="salon-meta">
+              <span class="salon-hours">🕒 Пн–Вс: 10:00 – 19:00</span>
+              <span class="salon-route-btn">Выбрать салон →</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="salon-minimal-card" data-salon-idx="1" style="cursor: pointer;">
-          <div class="salon-badge-gray">Салон оптики</div>
-          <h3 class="salon-title">ул. Советская, 137</h3>
-          <p class="salon-desc">Диагностика зрения оптометристами, приём детского и взрослого офтальмолога, срочное изготовление очков. Ремонт очков любой сложности (пайка шарниров, замена носовых упоров, установка болтиков). Большой выбор оправ и солнцезащитных очков, очковые линзы всех известных мировых производителей (Essilor, Shamir, Carl Zeiss, BBGR, Neolook, Завод ОДВ).</p>
-          <div class="salon-meta">
-            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
-            <span class="salon-map-link">Показать на карте</span>
+        <!-- Правая колонка: интерактивная карта -->
+        <div class="salons-map-sticky-wrap">
+          <div id="salonsMap" class="salons-map-container"></div>
+          <div class="salons-map-legend">
+            <div class="legend-item">
+              <span class="legend-dot dot-star">⭐</span>
+              <span>Мастерская и главный офис (ул. Карла Маркса, 42)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot dot-red">●</span>
+              <span>Салоны оптики в районах города (6 адресов)</span>
+            </div>
           </div>
         </div>
-
-        <div class="salon-minimal-card" data-salon-idx="2" style="cursor: pointer;">
-          <div class="salon-badge-gray">Салон оптики</div>
-          <h3 class="salon-title">ул. Советская, 174</h3>
-          <p class="salon-desc">Диагностика зрения оптометристами, приём детского и взрослого офтальмолога, срочное изготовление очков. Ремонт очков любой сложности (пайка шарниров, замена носовых упоров, установка болтиков). Большой выбор оправ и солнцезащитных очков, очковые линзы всех известных мировых производителей (Essilor, Shamir, Carl Zeiss, BBGR, Neolook, Завод ОДВ).</p>
-          <div class="salon-meta">
-            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
-            <span class="salon-map-link">Показать на карте</span>
-          </div>
-        </div>
-
-        <div class="salon-minimal-card" data-salon-idx="3" style="cursor: pointer;">
-          <div class="salon-badge-gray">Салон оптики</div>
-          <h3 class="salon-title">пр. Ленина, 146</h3>
-          <p class="salon-desc">Диагностика зрения оптометристами, приём детского и взрослого офтальмолога, срочное изготовление очков. Ремонт очков любой сложности (пайка шарниров, замена носовых упоров, установка болтиков). Большой выбор оправ и солнцезащитных очков, очковые линзы всех известных мировых производителей (Essilor, Shamir, Carl Zeiss, BBGR, Neolook, Завод ОДВ).</p>
-          <div class="salon-meta">
-            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
-            <span class="salon-map-link">Показать на карте</span>
-          </div>
-        </div>
-
-        <div class="salon-minimal-card" data-salon-idx="4" style="cursor: pointer;">
-          <div class="salon-badge-gray">ТРК «Крытый рынок»</div>
-          <h3 class="salon-title">ул. Карла Маркса, 74</h3>
-          <p class="salon-desc">Диагностика зрения оптометристами, приём детского и взрослого офтальмолога, срочное изготовление очков. Ремонт очков любой сложности (пайка шарниров, замена носовых упоров, установка болтиков). Большой выбор оправ и солнцезащитных очков, очковые линзы всех известных мировых производителей (Essilor, Shamir, Carl Zeiss, BBGR, Neolook, Завод ОДВ).</p>
-          <div class="salon-meta">
-            <span>🕒 Пн–Вс: 09:00 – 19:00</span>
-            <span class="salon-map-link">Показать на карте</span>
-          </div>
-        </div>
-
-        <div class="salon-minimal-card" data-salon-idx="5" style="cursor: pointer;">
-          <div class="salon-badge-gray">ТРК «МОСТ-2»</div>
-          <h3 class="salon-title">ул. Завенягина, 10а</h3>
-          <p class="salon-desc">Диагностика зрения оптометристами, приём детского и взрослого офтальмолога, срочное изготовление очков. Ремонт очков любой сложности (пайка шарниров, замена носовых упоров, установка болтиков). Большой выбор оправ и солнцезащитных очков, очковые линзы всех известных мировых производителей (Essilor, Shamir, Carl Zeiss, BBGR, Neolook, Завод ОДВ).</p>
-          <div class="salon-meta">
-            <span>🕒 Пн–Вс: 10:00 – 20:00</span>
-            <span class="salon-map-link">Показать на карте</span>
-          </div>
-        </div>
-
-        <div class="salon-minimal-card" data-salon-idx="6" style="cursor: pointer;">
-          <div class="salon-badge-gray">ТРК «Техникум»</div>
-          <h3 class="salon-title">ул. Пушкина, 21</h3>
-          <p class="salon-desc">Диагностика зрения оптометристами, приём детского и взрослого офтальмолога, срочное изготовление очков. Ремонт очков любой сложности (пайка шарниров, замена носовых упоров, установка болтиков). Большой выбор оправ и солнцезащитных очков, очковые линзы всех известных мировых производителей (Essilor, Shamir, Carl Zeiss, BBGR, Neolook, Завод ОДВ).</p>
-          <div class="salon-meta">
-            <span>🕒 Пн–Вс: 10:00 – 19:00</span>
-            <span class="salon-map-link">Показать на карте</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="salons-map-wrap">
-        <div id="salonsMap" class="salons-map-container"></div>
       </div>
     </div>
   </section>
@@ -3216,6 +3282,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20260920-v8"></script>
+  <script src="script.js?v=20260920-v9"></script>
 </body>
 </html>
