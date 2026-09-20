@@ -2462,11 +2462,9 @@ button, input {
 .footer-bottom-ribbon {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 18px;
   border-top: 1px solid #F1F5F9;
-  gap: 16px;
-  flex-wrap: wrap;
 }
 
 .footer-copy-text {
