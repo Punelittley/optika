@@ -3474,11 +3474,27 @@ button, input {
 
 .vibrant-card-overlay h4 {
   font-family: var(--font-heading);
-  font-size: 0.96rem;
+  font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.25;
-  margin-bottom: 4px;
+  margin: 0;
   color: #FFFFFF;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vibrant-card-overlay h4::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent, #E30613);
+  box-shadow: 0 0 10px var(--accent, #E30613);
+  flex-shrink: 0;
 }
 
 .vibrant-price {
@@ -3620,12 +3636,10 @@ button, input {
     margin-bottom: 6px;
   }
   .vibrant-card-overlay h4 {
-    font-size: 0.98rem;
-    line-height: 1.25;
-    margin-bottom: 6px;
-    white-space: normal;
-    word-break: normal;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.75);
   }
   .vibrant-price {
     font-size: 0.85rem;
