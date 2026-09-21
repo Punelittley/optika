@@ -4066,6 +4066,7 @@ button, input {
   scrollbar-width: none;
   margin: 28px -15px 0;
   padding: 8px 15px 20px;
+  cursor: grab;
 }
 
 .live-slider-track-wrap::-webkit-scrollbar {

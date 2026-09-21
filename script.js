@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
      CATALOG PAGINATION & CATEGORY FILTER
      ========================================================================== */
   const tabBtns = document.querySelectorAll('.tab-btn');
-  const productCards = Array.from(document.querySelectorAll('.product-card'));
+  const productCards = Array.from(document.querySelectorAll('#productsGrid .product-card'));
   const loadMoreBtn = document.getElementById('catalogLoadMoreBtn');
   const loadMoreText = document.getElementById('loadMoreBtnText');
   const countInfo = document.getElementById('catalogCountInfo');
@@ -260,17 +260,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Delegated click on all product cards and view buttons
   document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.btn-view-product, .btn-check-stock');
+    if (typeof isDraggingLiveSlider !== 'undefined' && isDraggingLiveSlider) return;
+    const btn = e.target.closest('.btn-view-product, .btn-check-stock, .live-card-action, .live-zoom-btn');
     if (btn) {
       e.preventDefault();
-      const card = btn.closest('.product-card');
+      const card = btn.closest('.product-card, .live-photo-card');
       if (card) {
         openProductModal(card);
         return;
       }
     }
 
-    const card = e.target.closest('.product-card');
+    const card = e.target.closest('.product-card, .live-photo-card');
     if (card && !e.target.closest('a')) {
       openProductModal(card);
     }
@@ -796,16 +797,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Live photos slider controls
+  let isDraggingLiveSlider = false;
   const liveSlider = document.getElementById('liveSliderContainer');
   const livePrev = document.getElementById('livePrev');
   const liveNext = document.getElementById('liveNext');
 
-  if (liveSlider && livePrev && liveNext) {
-    livePrev.addEventListener('click', () => {
-      liveSlider.scrollBy({ left: -300, behavior: 'smooth' });
+  if (liveSlider) {
+    if (livePrev) {
+      livePrev.addEventListener('click', () => {
+        liveSlider.scrollBy({ left: -320, behavior: 'smooth' });
+      });
+    }
+    if (liveNext) {
+      liveNext.addEventListener('click', () => {
+        liveSlider.scrollBy({ left: 320, behavior: 'smooth' });
+      });
+    }
+
+    // Drag to scroll on desktop
+    let isDown = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    liveSlider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      isDraggingLiveSlider = false;
+      startX = e.pageX - liveSlider.offsetLeft;
+      scrollStart = liveSlider.scrollLeft;
+      liveSlider.style.cursor = 'grabbing';
+      liveSlider.style.userSelect = 'none';
     });
-    liveNext.addEventListener('click', () => {
-      liveSlider.scrollBy({ left: 300, behavior: 'smooth' });
+
+    window.addEventListener('mouseup', () => {
+      if (isDown) {
+        isDown = false;
+        liveSlider.style.cursor = '';
+        liveSlider.style.removeProperty('user-select');
+        setTimeout(() => { isDraggingLiveSlider = false; }, 60);
+      }
+    });
+
+    liveSlider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      const x = e.pageX - liveSlider.offsetLeft;
+      const walk = (x - startX);
+      if (Math.abs(walk) > 6) {
+        isDraggingLiveSlider = true;
+      }
+      liveSlider.scrollLeft = scrollStart - walk;
     });
   }
 
