@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=20260921-v20">
+  <link rel="stylesheet" href="style.css?v=20260921-v21">
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -162,60 +162,69 @@
         <p class="vibrant-subtitle">Смелые формы, сочные цвета, акцентные оправы и цветные линзы по доступным ценам в салонах «Урал-Оптика»</p>
       </div>
       
-      <div class="vibrant-grid" id="vibrantGrid">
-        <div class="vibrant-card" style="--accent: #FACC15;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
-          <img src="images/vibrant-lemon-girl.jpg" alt="Солнечный стиль и лимонные оправы" loading="lazy">
-          <div class="vibrant-card-overlay">
-            <span class="vibrant-badge">Sunny Pop</span>
-            <h4>Солнечные оправы</h4>
-            <span class="vibrant-price">от 2 500 ₽</span>
+      <div class="vibrant-slider-wrap">
+        <button type="button" class="vibrant-nav-arrow vibrant-prev" id="vibrantPrev" aria-label="Предыдущий тренд">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="vibrant-grid" id="vibrantGrid">
+          <div class="vibrant-card" style="--accent: #FACC15;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
+            <img src="images/vibrant-lemon-girl.jpg" alt="Солнечный стиль и лимонные оправы" loading="lazy">
+            <div class="vibrant-card-overlay">
+              <span class="vibrant-badge">Sunny Pop</span>
+              <h4>Солнечные оправы</h4>
+              <span class="vibrant-price">от 2 500 ₽</span>
+            </div>
+          </div>
+
+          <div class="vibrant-card" style="--accent: #EC4899;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
+            <img src="images/vibrant-bubblegum-pink.jpg" alt="Розовый поп-арт и цветные очки" loading="lazy">
+            <div class="vibrant-card-overlay">
+              <span class="vibrant-badge">Bubblegum Pink</span>
+              <h4>Розовые и пастель</h4>
+              <span class="vibrant-price">от 2 500 ₽</span>
+            </div>
+          </div>
+
+          <div class="vibrant-card" style="--accent: #10B981;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
+            <img src="images/vibrant-green-turtleneck.jpg" alt="Изумрудный стиль и геометрия" loading="lazy">
+            <div class="vibrant-card-overlay">
+              <span class="vibrant-badge">Emerald Fresh</span>
+              <h4>Изумрудные и неоновые</h4>
+              <span class="vibrant-price">от 2 800 ₽</span>
+            </div>
+          </div>
+
+          <div class="vibrant-card" style="--accent: #3B82F6;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
+            <img src="images/vibrant-blue-kimono.png" alt="Ультрамарин и круглые оправы" loading="lazy">
+            <div class="vibrant-card-overlay">
+              <span class="vibrant-badge">Cobalt Blue</span>
+              <h4>Геометрия и синий</h4>
+              <span class="vibrant-price">от 3 400 ₽</span>
+            </div>
+          </div>
+
+          <div class="vibrant-card" style="--accent: #F97316;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
+            <img src="images/vibrant-cherry-cocktail.jpg" alt="Яркие солнцезащитные очки" loading="lazy">
+            <div class="vibrant-card-overlay">
+              <span class="vibrant-badge">Cherry & Gloss</span>
+              <h4>Cat-Eye и стрелки</h4>
+              <span class="vibrant-price">от 2 900 ₽</span>
+            </div>
           </div>
         </div>
 
-        <div class="vibrant-card" style="--accent: #EC4899;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
-          <img src="images/vibrant-bubblegum-pink.jpg" alt="Розовый поп-арт и цветные очки" loading="lazy">
-          <div class="vibrant-card-overlay">
-            <span class="vibrant-badge">Bubblegum Pink</span>
-            <h4>Розовые и пастель</h4>
-            <span class="vibrant-price">от 2 500 ₽</span>
-          </div>
-        </div>
-
-        <div class="vibrant-card" style="--accent: #10B981;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
-          <img src="images/vibrant-green-turtleneck.jpg" alt="Изумрудный стиль и геометрия" loading="lazy">
-          <div class="vibrant-card-overlay">
-            <span class="vibrant-badge">Emerald Fresh</span>
-            <h4>Изумрудные и неоновые</h4>
-            <span class="vibrant-price">от 2 800 ₽</span>
-          </div>
-        </div>
-
-        <div class="vibrant-card" style="--accent: #3B82F6;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
-          <img src="images/vibrant-blue-kimono.png" alt="Ультрамарин и круглые оправы" loading="lazy">
-          <div class="vibrant-card-overlay">
-            <span class="vibrant-badge">Cobalt Blue</span>
-            <h4>Геометрия и синий</h4>
-            <span class="vibrant-price">от 3 400 ₽</span>
-          </div>
-        </div>
-
-        <div class="vibrant-card" style="--accent: #F97316;" onclick="window.open('https://vk.me/uraloptikm', '_blank')" title="Консультация в VK">
-          <img src="images/vibrant-cherry-cocktail.jpg" alt="Яркие солнцезащитные очки" loading="lazy">
-          <div class="vibrant-card-overlay">
-            <span class="vibrant-badge">Cherry & Gloss</span>
-            <h4>Cat-Eye и стрелки</h4>
-            <span class="vibrant-price">от 2 900 ₽</span>
-          </div>
-        </div>
+        <button type="button" class="vibrant-nav-arrow vibrant-next" id="vibrantNext" aria-label="Следующий тренд">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
 
       <!-- Mobile navigation: interactive swipe hint & dots -->
       <div class="vibrant-mobile-nav">
-        <div class="vibrant-hint-pill">
+        <button type="button" class="vibrant-hint-pill" id="vibrantScrollHint" aria-label="Прокрутить тренды вперед">
           <span class="vibrant-hint-pulse"></span>
-          <span>Листайте тренды</span>
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
+          <span>Листайте тренды →</span>
+        </button>
         <div class="vibrant-dots" id="vibrantDots" aria-label="Индикаторы трендов">
           <button type="button" class="vibrant-dot active" data-index="0" aria-label="Тренд 1"></button>
           <button type="button" class="vibrant-dot" data-index="1" aria-label="Тренд 2"></button>
@@ -226,6 +235,38 @@
       </div>
     </div>
   </section>
+
+  <!-- === БЕГУЩАЯ СТРОКА (ИНФИНИТИ ТИКЕР) === -->
+  <div class="optic-marquee-bar" aria-label="Ассортимент и преимущества Урал-Оптика">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span class="marquee-item"><span class="m-star">✦</span> ОПРАВЫ ОТ 2 500 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ОЧКОВЫЕ ЛИНЗЫ С АНТИБЛИКОМ ОТ 3 200 ₽ ЗА ПАРУ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> СОЛНЦЕЗАЩИТНЫЕ ОЧКИ ОТ 1 200 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> СРОЧНОЕ ИЗГОТОВЛЕНИЕ ЗА 20 МИНУТ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ДИАГНОСТИКА ЗРЕНИЯ ОПТОМЕТРИСТАМИ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> КОМПЬЮТЕРНЫЙ АВТОРЕФРАКТОМЕТР</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ФУТЛЯРЫ ДЛЯ ОЧКОВ ОТ 300 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ЦЕПОЧКИ ДЛЯ ОЧКОВ ОТ 150 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ПАЙКА ШАРНИРОВ И ЗАМЕНА НОСОВЫХ УПОРОВ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> 7 САЛОНОВ В МАГНИТОГОРСКЕ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ESSILOR · ZEISS · SHAMIR · BBGR · NEOLOOK · ОДВ</span>
+      </div>
+      <div class="marquee-group" aria-hidden="true">
+        <span class="marquee-item"><span class="m-star">✦</span> ОПРАВЫ ОТ 2 500 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ОЧКОВЫЕ ЛИНЗЫ С АНТИБЛИКОМ ОТ 3 200 ₽ ЗА ПАРУ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> СОЛНЦЕЗАЩИТНЫЕ ОЧКИ ОТ 1 200 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> СРОЧНОЕ ИЗГОТОВЛЕНИЕ ЗА 20 МИНУТ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ДИАГНОСТИКА ЗРЕНИЯ ОПТОМЕТРИСТАМИ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> КОМПЬЮТЕРНЫЙ АВТОРЕФРАКТОМЕТР</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ФУТЛЯРЫ ДЛЯ ОЧКОВ ОТ 300 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ЦЕПОЧКИ ДЛЯ ОЧКОВ ОТ 150 ₽</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ПАЙКА ШАРНИРОВ И ЗАМЕНА НОСОВЫХ УПОРОВ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> 7 САЛОНОВ В МАГНИТОГОРСКЕ</span>
+        <span class="marquee-item"><span class="m-star">✦</span> ESSILOR · ZEISS · SHAMIR · BBGR · NEOLOOK · ОДВ</span>
+      </div>
+    </div>
+  </div>
 
   <section class="promotions-section" id="promotions">
     <div class="container">
@@ -377,7 +418,6 @@
           <button class="tab-btn" data-filter="lenses">Очковые линзы</button>
           <button class="tab-btn" data-filter="contact-lenses">Контактные линзы и уход</button>
           <button class="tab-btn" data-filter="accessories">Аксессуары</button>
-          <button class="tab-btn" data-filter="discount">Акции и скидки</button>
         </div>
       </div>
 
@@ -4950,6 +4990,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20260921-v20"></script>
+  <script src="script.js?v=20260921-v21"></script>
 </body>
 </html>

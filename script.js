@@ -731,48 +731,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // === VIBRANT TRENDS CAROUSEL (MOBILE DOTS & SWIPE SYNC) ===
-  const vibrantGrid = document.getElementById('vibrantGrid');
-  const vibrantDots = document.getElementById('vibrantDots');
-  if (vibrantGrid && vibrantDots) {
-    const dots = vibrantDots.querySelectorAll('.vibrant-dot');
-    const cards = vibrantGrid.querySelectorAll('.vibrant-card');
-
-    function updateActiveVibrantDot() {
-      if (window.innerWidth > 768) return;
-      const scrollLeft = vibrantGrid.scrollLeft;
-      const card = cards[0];
-      if (!card) return;
-      const cardWidth = card.offsetWidth;
-      const gap = 14;
-      const activeIdx = Math.min(Math.round(scrollLeft / (cardWidth + gap)), dots.length - 1);
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === activeIdx);
-      });
-    }
-
-    let isScrolling = false;
-    vibrantGrid.addEventListener('scroll', () => {
-      if (!isScrolling) {
-        window.requestAnimationFrame(() => {
-          updateActiveVibrantDot();
-          isScrolling = false;
-        });
-        isScrolling = true;
-      }
-    }, { passive: true });
-
-    dots.forEach((dot) => {
-      dot.addEventListener('click', () => {
-        const idx = parseInt(dot.getAttribute('data-index'), 10);
-        const card = cards[idx];
-        if (card) {
-          card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-        }
-      });
-    });
-  }
-
   // === SMOOTH SCROLL & HEADER GLASS EFFECT ===
   function initScrollAnimations() {
     const revealElements = document.querySelectorAll('.reveal, .reveal-fade, .reveal-stagger');
@@ -848,4 +806,82 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ==========================================================================
+     VIBRANT TRENDS CAROUSEL INTERACTION
+     ========================================================================== */
+  const vibrantGrid = document.getElementById('vibrantGrid');
+  const vibrantPrev = document.getElementById('vibrantPrev');
+  const vibrantNext = document.getElementById('vibrantNext');
+  const vibrantHint = document.getElementById('vibrantScrollHint');
+  const vibrantDots = document.querySelectorAll('.vibrant-dot');
+
+  if (vibrantGrid) {
+    const getScrollStep = () => {
+      const firstCard = vibrantGrid.querySelector('.vibrant-card');
+      return firstCard ? (firstCard.offsetWidth + 14) : 234;
+    };
+
+    const updateArrowsAndDots = () => {
+      const step = getScrollStep();
+      const currentScroll = vibrantGrid.scrollLeft;
+      const maxScroll = vibrantGrid.scrollWidth - vibrantGrid.clientWidth;
+
+      if (vibrantPrev) {
+        vibrantPrev.style.opacity = currentScroll <= 12 ? '0.3' : '1';
+        vibrantPrev.style.pointerEvents = currentScroll <= 12 ? 'none' : 'auto';
+      }
+      if (vibrantNext) {
+        vibrantNext.style.opacity = currentScroll >= maxScroll - 12 ? '0.3' : '1';
+        vibrantNext.style.pointerEvents = currentScroll >= maxScroll - 12 ? 'none' : 'auto';
+      }
+
+      if (vibrantDots.length > 0) {
+        const activeIdx = Math.min(vibrantDots.length - 1, Math.max(0, Math.round(currentScroll / step)));
+        vibrantDots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activeIdx);
+        });
+      }
+    };
+
+    if (vibrantPrev) {
+      vibrantPrev.addEventListener('click', (e) => {
+        e.preventDefault();
+        vibrantGrid.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+      });
+    }
+
+    if (vibrantNext) {
+      vibrantNext.addEventListener('click', (e) => {
+        e.preventDefault();
+        vibrantGrid.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+      });
+    }
+
+    if (vibrantHint) {
+      vibrantHint.addEventListener('click', (e) => {
+        e.preventDefault();
+        const maxScroll = vibrantGrid.scrollWidth - vibrantGrid.clientWidth;
+        if (vibrantGrid.scrollLeft >= maxScroll - 20) {
+          vibrantGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          vibrantGrid.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+        }
+      });
+    }
+
+    vibrantDots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        const cards = vibrantGrid.querySelectorAll('.vibrant-card');
+        if (cards[idx]) {
+          cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        }
+      });
+    });
+
+    vibrantGrid.addEventListener('scroll', updateArrowsAndDots, { passive: true });
+    // Initial check after DOM settles
+    setTimeout(updateArrowsAndDots, 150);
+  }
+
 });
+
