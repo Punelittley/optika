@@ -4033,9 +4033,16 @@ button, input {
 .slider-arrows-group {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
+.live-arrow-btn,
 .slider-arrow-compact {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -4048,14 +4055,22 @@ button, input {
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
 }
 
+.live-arrow-btn svg,
+.slider-arrow-compact svg {
+  width: 20px;
+  height: 20px;
+}
+
+.live-arrow-btn:hover,
 .slider-arrow-compact:hover {
-  background: var(--color-red);
-  color: #FFFFFF;
-  border-color: var(--color-red);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(227, 6, 19, 0.25);
+  background: var(--color-red) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-red) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(227, 6, 19, 0.25) !important;
 }
 
 .live-slider-track-wrap {
@@ -4137,7 +4152,7 @@ button, input {
 .live-photo-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(15, 23, 42, 0.42) !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4153,14 +4168,25 @@ button, input {
 .live-zoom-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: #FFFFFF;
-  color: #0F172A;
-  padding: 8px 14px;
+  gap: 7px;
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  padding: 9px 16px;
   border-radius: 50px;
-  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.live-photo-card:hover .live-zoom-btn {
+  transform: scale(1.04);
+}
+
+.live-zoom-btn:hover {
+  background: var(--color-red) !important;
+  color: #FFFFFF !important;
 }
 
 .live-card-info {
