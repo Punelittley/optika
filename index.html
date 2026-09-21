@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=20260921-v15">
+  <link rel="stylesheet" href="style.css?v=20260921-v16">
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -27,6 +27,7 @@
         <ul class="nav-list">
           <li><a href="#promotions" class="nav-link nav-link-hot">Акции</a></li>
           <li><a href="#catalog" class="nav-link">Каталог</a></li>
+          <li><a href="#live-photos" class="nav-link">Живые фото</a></li>
           <li><a href="#about" class="nav-link">О нас</a></li>
           <li><a href="#reviews" class="nav-link">Отзывы</a></li>
           <li><a href="#salons" class="nav-link">Салоны</a></li>
@@ -67,6 +68,7 @@
     <ul class="mobile-nav-list">
       <li><a href="#promotions" class="mobile-nav-link">Акции</a></li>
       <li><a href="#catalog" class="mobile-nav-link">Каталог</a></li>
+      <li><a href="#live-photos" class="mobile-nav-link">Живые фото из салонов</a></li>
       <li><a href="#about" class="mobile-nav-link">О компании</a></li>
       <li><a href="#reviews" class="mobile-nav-link">Отзывы</a></li>
       <li><a href="#salons" class="mobile-nav-link">Салоны</a></li>
@@ -2578,6 +2580,1601 @@
     </div>
   </section>
 
+  
+  <!-- === СЕКЦИЯ: ЖИВЫЕ ФОТО ИЗ НАШИХ САЛОНОВ === -->
+  <section class="live-photos-section" id="live-photos">
+    <div class="container">
+      <div class="section-title-row">
+        <div>
+          <div class="kicker-line">
+            <span class="red-dash"></span>
+            <span class="kicker-text">РЕАЛЬНЫЙ АССОРТИМЕНТ ИЗ НАЛИЧИЯ</span>
+          </div>
+          <h2 class="section-heading">Живые фото из наших салонов</h2>
+          <p class="section-subheading">Настоящие фотографии оправ и солнцезащитных очков с витрин «Урал-Оптика» в Магнитогорске. Все модели доступны для примерки в наших 7 салонах.</p>
+        </div>
+        <div class="live-photos-controls">
+          <span class="live-photos-count-badge">50 моделей вживую</span>
+          <div class="slider-arrows-group">
+            <button class="slider-arrow slider-arrow-compact" id="livePrev" aria-label="Предыдущие фото">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="slider-arrow slider-arrow-compact" id="liveNext" aria-label="Следующие фото">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Слайдер живых фотографий -->
+      <div class="live-slider-track-wrap" id="liveSliderContainer">
+        <div class="live-slider-track" id="liveSliderTrack">
+
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Polarized #1"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/-LY_A9A58T0Rq4N1dSQqvfiPlelwWTQj9VaVkcIUPIW8450puKQdWPozw4TqNfLzqRLYmkNOYPuWGL7vXGRoWUcN.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/-LY_A9A58T0Rq4N1dSQqvfiPlelwWTQj9VaVkcIUPIW8450puKQdWPozw4TqNfLzqRLYmkNOYPuWGL7vXGRoWUcN.jpg" alt="Солнцезащитные очки Polarized #1" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Polarized #1</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Стильная металлическая оправа #2"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/5nBAyiatzIs9lAF-KJk5gbuWN0mWK9H5EULZjKBtIIf0J-4Ef3WWeMcervmEkCJk6docGdjflNbM5EobadN8IUYn.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/5nBAyiatzIs9lAF-KJk5gbuWN0mWK9H5EULZjKBtIIf0J-4Ef3WWeMcervmEkCJk6docGdjflNbM5EobadN8IUYn.jpg" alt="Стильная металлическая оправа #2" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Стильная металлическая оправа #2</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки UV400 Black Edition #3"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/6qaniVgKZMTVkBBkItCUvosWe4SQ0meOA67KdiRiOx-9iPUNs51Zh9tvdTyoQTC4n36iYgrb4XDlVNHoW2hnw5h7.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/6qaniVgKZMTVkBBkItCUvosWe4SQ0meOA67KdiRiOx-9iPUNs51Zh9tvdTyoQTC4n36iYgrb4XDlVNHoW2hnw5h7.jpg" alt="Очки UV400 Black Edition #3" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки UV400 Black Edition #3</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Оправа Cat-Eye с акцентом #4"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/8wQqd1-gHg80blV-EbAKN9ExNF0wH0HsL9X6DkQ8bvz20PpL69jg6ei6nFH703uCJRPah75BK4kAXIBNONeMjuaZ.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/8wQqd1-gHg80blV-EbAKN9ExNF0wH0HsL9X6DkQ8bvz20PpL69jg6ei6nFH703uCJRPah75BK4kAXIBNONeMjuaZ.jpg" alt="Оправа Cat-Eye с акцентом #4" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Оправа Cat-Eye с акцентом #4</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Aviator #5"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/aHXEt4_PVZTUi5rKC_ENX4z5YMkmjidT7XDEh58Czos4ayVXoGEAxZsLzuyKlI9FRpF2uV2VOeLzCbVs2gc2Phrr.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/aHXEt4_PVZTUi5rKC_ENX4z5YMkmjidT7XDEh58Czos4ayVXoGEAxZsLzuyKlI9FRpF2uV2VOeLzCbVs2gc2Phrr.jpg" alt="Солнцезащитные очки Aviator #5" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Aviator #5</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 600 ₽"
+                 data-title="Трендовая оправа Oversize #6"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/AqasOjuwqcGOuvqrlo1chC1YRGUj88RieaNtR9tV29-SDBoMUClMm2GNex9x57kMu5nWimlYl8Y0ifxHB3GWCbXa.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/AqasOjuwqcGOuvqrlo1chC1YRGUj88RieaNtR9tV29-SDBoMUClMm2GNex9x57kMu5nWimlYl8Y0ifxHB3GWCbXa.jpg" alt="Трендовая оправа Oversize #6" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Трендовая оправа Oversize #6</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 600 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки спортивные Polarized #7"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/AX8mvPTgkkPKScSSZANI8Wa7g3Hwy0YdL-q4olJ6_BqSgdVXjZNBTDGlMJkV_xaqXvCdpZqSZe7D-kGEx2Q4Hs6s.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/AX8mvPTgkkPKScSSZANI8Wa7g3Hwy0YdL-q4olJ6_BqSgdVXjZNBTDGlMJkV_xaqXvCdpZqSZe7D-kGEx2Q4Hs6s.jpg" alt="Очки спортивные Polarized #7" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки спортивные Polarized #7</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Геометрическая оправа Gold/Black #8"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/BAiY61S9zAZ_TzftEm-6z88EAmtXrAftJQs2X34gINmFooxma1cTbGLf2L2kt0H6mR-7cArU-Wv4UcRNpwaRDau_.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/BAiY61S9zAZ_TzftEm-6z88EAmtXrAftJQs2X34gINmFooxma1cTbGLf2L2kt0H6mR-7cArU-Wv4UcRNpwaRDau_.jpg" alt="Геометрическая оправа Gold/Black #8" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Геометрическая оправа Gold/Black #8</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Hexagon #9"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/BI4FGA5pcltOe8gOsA40wYDgR7sBfLTbFDzjtU9lo_uYeYqLe6l3IdaHdGIC_fbLX83r9cO-jRkcuoYXdMa-0fDj.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/BI4FGA5pcltOe8gOsA40wYDgR7sBfLTbFDzjtU9lo_uYeYqLe6l3IdaHdGIC_fbLX83r9cO-jRkcuoYXdMa-0fDj.jpg" alt="Солнцезащитные очки Hexagon #9" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Hexagon #9</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Классическая оправа для зрения #10"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/bO7Q0u1R8CbEjzumdY7YLNAJk70aFn7-bkOR57c0RUVd-FSd22XQVGbSd1K9NFXg8FyYAgqVV_HOqTUdVx4T6AYL.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/bO7Q0u1R8CbEjzumdY7YLNAJk70aFn7-bkOR57c0RUVd-FSd22XQVGbSd1K9NFXg8FyYAgqVV_HOqTUdVx4T6AYL.jpg" alt="Классическая оправа для зрения #10" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Классическая оправа для зрения #10</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Polarized #11"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/DpXn6ncgkRLdVqBWHBT0b3s5qzdCO0RusQwQLGmPQxxjFKD9kb5ivHcUiFoV82C0iPt54NBlfZMp7hoyeeus9_tu.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/DpXn6ncgkRLdVqBWHBT0b3s5qzdCO0RusQwQLGmPQxxjFKD9kb5ivHcUiFoV82C0iPt54NBlfZMp7hoyeeus9_tu.jpg" alt="Солнцезащитные очки Polarized #11" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Polarized #11</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Стильная металлическая оправа #12"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/EUViiEOu4C9XskW-sVyzrjyCDsZXE9_ZS6wbjEuLiEPG7G4YVMXsCHO_yvwsezc-2FvmrBU0xTYujIdQ0kg3kPP-.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/EUViiEOu4C9XskW-sVyzrjyCDsZXE9_ZS6wbjEuLiEPG7G4YVMXsCHO_yvwsezc-2FvmrBU0xTYujIdQ0kg3kPP-.jpg" alt="Стильная металлическая оправа #12" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Стильная металлическая оправа #12</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки UV400 Black Edition #13"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/Fi3VG5vqRqW8gS5GMyprU_J4esEZl_SjjZuMpTLCTt2-3iUNcqIAUXprDonirTiwa6gU-kGsBUZBiJSBQnP-UlCU.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/Fi3VG5vqRqW8gS5GMyprU_J4esEZl_SjjZuMpTLCTt2-3iUNcqIAUXprDonirTiwa6gU-kGsBUZBiJSBQnP-UlCU.jpg" alt="Очки UV400 Black Edition #13" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки UV400 Black Edition #13</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Оправа Cat-Eye с акцентом #14"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/G1TiQBhxHnTf7wcmhP_dAZb6oQ7PDRWU0S68xi718LJD43mMzF85V8JoYLrN6GN7-qyohK-5rmMqDGaTsSOlPGL_.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/G1TiQBhxHnTf7wcmhP_dAZb6oQ7PDRWU0S68xi718LJD43mMzF85V8JoYLrN6GN7-qyohK-5rmMqDGaTsSOlPGL_.jpg" alt="Оправа Cat-Eye с акцентом #14" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Оправа Cat-Eye с акцентом #14</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Aviator #15"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/G6U6ljMnKEI8LHgdqf85qgC7vQVngQoSb2gTKQLHPa0hmwEPtzlBp2lenLTiEDZLF4TCbeVq4b5VMDs6cxWwUxm_.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/G6U6ljMnKEI8LHgdqf85qgC7vQVngQoSb2gTKQLHPa0hmwEPtzlBp2lenLTiEDZLF4TCbeVq4b5VMDs6cxWwUxm_.jpg" alt="Солнцезащитные очки Aviator #15" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Aviator #15</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 600 ₽"
+                 data-title="Трендовая оправа Oversize #16"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/H3CRAi9ZLwZQ9e2xs_Nyn-s54ZP2Yq5bVbxMdvFje9kn-1cAO0yNrbY_FEBOapTZiN1xiNCDWQRsbdLF35Vbm5vQ.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/H3CRAi9ZLwZQ9e2xs_Nyn-s54ZP2Yq5bVbxMdvFje9kn-1cAO0yNrbY_FEBOapTZiN1xiNCDWQRsbdLF35Vbm5vQ.jpg" alt="Трендовая оправа Oversize #16" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Трендовая оправа Oversize #16</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 600 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки спортивные Polarized #17"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/hBBQPSJQpiJPG_-5Xj3XrxluOgnLCAVRO_BpWXxNdQsw-QIJW_axkSaveZWNmIFBgHubsR_kqVXPA5On3h8ivPR8.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/hBBQPSJQpiJPG_-5Xj3XrxluOgnLCAVRO_BpWXxNdQsw-QIJW_axkSaveZWNmIFBgHubsR_kqVXPA5On3h8ivPR8.jpg" alt="Очки спортивные Polarized #17" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки спортивные Polarized #17</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Геометрическая оправа Gold/Black #18"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/I545fRyUcpyS-gDdtaeoZNmARzJQgzPnWKhyGJmEvDSDqCTiFa-JxJYVTiXs7RUrsJY4tSrqAGqz50Ax1-Z52Lqm.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/I545fRyUcpyS-gDdtaeoZNmARzJQgzPnWKhyGJmEvDSDqCTiFa-JxJYVTiXs7RUrsJY4tSrqAGqz50Ax1-Z52Lqm.jpg" alt="Геометрическая оправа Gold/Black #18" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Геометрическая оправа Gold/Black #18</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Hexagon #19"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/Icn1s4iFB_dbAWsEmzqk2OvfsjnuPAhKtmRviZzGXuhoR4h329_9hZWJjpQWJsBK0Mov-yX8CJqF7OqbGDkO1Cf2.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/Icn1s4iFB_dbAWsEmzqk2OvfsjnuPAhKtmRviZzGXuhoR4h329_9hZWJjpQWJsBK0Mov-yX8CJqF7OqbGDkO1Cf2.jpg" alt="Солнцезащитные очки Hexagon #19" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Hexagon #19</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Классическая оправа для зрения #20"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/JcqvhIDkxzX7YC_jbenpe-Azgxl556Ww2FiEDxtMbATJYupSosWMgBR0y1gjBrn_SMxtC4YvMMo6ceDi1e9GSVZX.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/JcqvhIDkxzX7YC_jbenpe-Azgxl556Ww2FiEDxtMbATJYupSosWMgBR0y1gjBrn_SMxtC4YvMMo6ceDi1e9GSVZX.jpg" alt="Классическая оправа для зрения #20" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Классическая оправа для зрения #20</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Polarized #21"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/JPZfyrr3ZpMRBnapoR-tIUUtINx6JGtY8aECrjkOFLPgu6b1Mt0fwFqkJZsb_pQO-S0ve_tyyWgopqknXLPMscDE.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/JPZfyrr3ZpMRBnapoR-tIUUtINx6JGtY8aECrjkOFLPgu6b1Mt0fwFqkJZsb_pQO-S0ve_tyyWgopqknXLPMscDE.jpg" alt="Солнцезащитные очки Polarized #21" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Polarized #21</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Стильная металлическая оправа #22"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/kjwyRs1qbwJi_l9P66f-95f1KZZN-ZLHgr5nu2h5TrsbKptAbR5vqyvZ0eonXYVA-wDRYw5zxOf_zAb1Qlz6wCMl.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/kjwyRs1qbwJi_l9P66f-95f1KZZN-ZLHgr5nu2h5TrsbKptAbR5vqyvZ0eonXYVA-wDRYw5zxOf_zAb1Qlz6wCMl.jpg" alt="Стильная металлическая оправа #22" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Стильная металлическая оправа #22</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки UV400 Black Edition #23"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/lf5gfFexbCxAyoNBlq5H1EU76vN506LCGQ5HwdwqM_PRhCEukkuqy707WI8tqgWYomKRZYcQ6qm8uTAwoAxjvlU8.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/lf5gfFexbCxAyoNBlq5H1EU76vN506LCGQ5HwdwqM_PRhCEukkuqy707WI8tqgWYomKRZYcQ6qm8uTAwoAxjvlU8.jpg" alt="Очки UV400 Black Edition #23" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки UV400 Black Edition #23</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Оправа Cat-Eye с акцентом #24"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/LgbFBaOCstvkyzGF1J7WYGeX8zF9BSC4X87pbwgkDAsFN2ysDN6fyQq8fa4u0I_8iPzYHwUWzTcuFjdZ-uOndA1Z.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/LgbFBaOCstvkyzGF1J7WYGeX8zF9BSC4X87pbwgkDAsFN2ysDN6fyQq8fa4u0I_8iPzYHwUWzTcuFjdZ-uOndA1Z.jpg" alt="Оправа Cat-Eye с акцентом #24" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Оправа Cat-Eye с акцентом #24</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Aviator #25"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/MLmiUJcyVhjuaELH_BsvU7KdUvVQUFxn_kJGvHc2W9LBqU423YaJpFCZsIRx4K-jke1El4DDowkuUerOPthRSGN1.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/MLmiUJcyVhjuaELH_BsvU7KdUvVQUFxn_kJGvHc2W9LBqU423YaJpFCZsIRx4K-jke1El4DDowkuUerOPthRSGN1.jpg" alt="Солнцезащитные очки Aviator #25" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Aviator #25</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 600 ₽"
+                 data-title="Трендовая оправа Oversize #26"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/nFFF2ic2AAvS8cbuXqyMiQxCBPnz2p5xtVnPOuA_nnZ9Smm_hvN9UtnI_MmnMpMs7ZIne2cPavU9kViGJWHFFLx9.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/nFFF2ic2AAvS8cbuXqyMiQxCBPnz2p5xtVnPOuA_nnZ9Smm_hvN9UtnI_MmnMpMs7ZIne2cPavU9kViGJWHFFLx9.jpg" alt="Трендовая оправа Oversize #26" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Трендовая оправа Oversize #26</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 600 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки спортивные Polarized #27"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/nr514f61O0YvaW0nLOw1-Fl8LLo-aaVqma1JF0X9sHos5GoQ0hJ1Ouig8l-6pW8WRHrTjH-03FmX3W8q7RPV4evu.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/nr514f61O0YvaW0nLOw1-Fl8LLo-aaVqma1JF0X9sHos5GoQ0hJ1Ouig8l-6pW8WRHrTjH-03FmX3W8q7RPV4evu.jpg" alt="Очки спортивные Polarized #27" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки спортивные Polarized #27</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Геометрическая оправа Gold/Black #28"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/oc1RaMIGsnrpYviXuSQR1N_EenSY2fDTGVwjUMwfwCi_wPG_IED7K-3H340bfIFOgZeX5BdwvZGenc0GJPj0P12b.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/oc1RaMIGsnrpYviXuSQR1N_EenSY2fDTGVwjUMwfwCi_wPG_IED7K-3H340bfIFOgZeX5BdwvZGenc0GJPj0P12b.jpg" alt="Геометрическая оправа Gold/Black #28" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Геометрическая оправа Gold/Black #28</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Hexagon #29"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/OdHJVs77NnZBSUocIDanKQO08ueW9OqIDCsVz-9-4_E1kKtr7Y5kkcrWJ2LQBKUzawVOi2KA8hTCyA6qsil7gTb1.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/OdHJVs77NnZBSUocIDanKQO08ueW9OqIDCsVz-9-4_E1kKtr7Y5kkcrWJ2LQBKUzawVOi2KA8hTCyA6qsil7gTb1.jpg" alt="Солнцезащитные очки Hexagon #29" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Hexagon #29</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Классическая оправа для зрения #30"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/OKrhdHqexNhm5ZZomDCHZTM8p4YGSnWETsW8d222C2T-ujQH24OWzvK1O_iyPXJiMEP3lvrVTikReLCxzOTjXR9n.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/OKrhdHqexNhm5ZZomDCHZTM8p4YGSnWETsW8d222C2T-ujQH24OWzvK1O_iyPXJiMEP3lvrVTikReLCxzOTjXR9n.jpg" alt="Классическая оправа для зрения #30" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Классическая оправа для зрения #30</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Polarized #31"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/oorE2qAf9FOP0Oi9l3j3B9TqEaHavxes-Wd7aOTOk4lQnH2i4bm7eRGg4wwhw01kQunihhYsVk_2U-G3O_VT28Yz.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/oorE2qAf9FOP0Oi9l3j3B9TqEaHavxes-Wd7aOTOk4lQnH2i4bm7eRGg4wwhw01kQunihhYsVk_2U-G3O_VT28Yz.jpg" alt="Солнцезащитные очки Polarized #31" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Polarized #31</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Стильная металлическая оправа #32"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/P1T2noZF9kqsGxhOKysbYpPVsqeonoem711qWXdxEuW0A_GSDeojX4tjDkjIeNP2vXGLQBvMjN0zaCQ-xujVNSFQ.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/P1T2noZF9kqsGxhOKysbYpPVsqeonoem711qWXdxEuW0A_GSDeojX4tjDkjIeNP2vXGLQBvMjN0zaCQ-xujVNSFQ.jpg" alt="Стильная металлическая оправа #32" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Стильная металлическая оправа #32</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки UV400 Black Edition #33"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/P4uW_NI3NgA3THjMDtO-x5-SvHdG_QBlsDG1m33MU0SJ23qn_0l_19dkUVmjyEt5C9lYK1bZXBx-RpFZ_4MhaYxv.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/P4uW_NI3NgA3THjMDtO-x5-SvHdG_QBlsDG1m33MU0SJ23qn_0l_19dkUVmjyEt5C9lYK1bZXBx-RpFZ_4MhaYxv.jpg" alt="Очки UV400 Black Edition #33" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки UV400 Black Edition #33</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Оправа Cat-Eye с акцентом #34"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/Q-XxYvtF39MD8vsLzYlqhnUTW3Tl1w-S1p3mkjvGQavghPuAn5KMb39kmDmwQ8BKDUExbxmdKeuK90CdVbVN_j-q.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/Q-XxYvtF39MD8vsLzYlqhnUTW3Tl1w-S1p3mkjvGQavghPuAn5KMb39kmDmwQ8BKDUExbxmdKeuK90CdVbVN_j-q.jpg" alt="Оправа Cat-Eye с акцентом #34" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Оправа Cat-Eye с акцентом #34</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Aviator #35"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/QlmQUj3pv_qY3I0zPaZ2zWWjNRwVhHXLN35e77enEfLRn7LpAbWwn7mbM5T2VF5vQKgLqXHYRpOGiANXQehSHSfx.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/QlmQUj3pv_qY3I0zPaZ2zWWjNRwVhHXLN35e77enEfLRn7LpAbWwn7mbM5T2VF5vQKgLqXHYRpOGiANXQehSHSfx.jpg" alt="Солнцезащитные очки Aviator #35" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Aviator #35</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 600 ₽"
+                 data-title="Трендовая оправа Oversize #36"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/QT0Z8h3stv1_uuC_q3QA68D8AjQumUcr8c8TO8ySO_PDYSqtXAAWEdNVtTN6j4EUgpIKB_Bmkofe9OFs0J21Q9Tl.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/QT0Z8h3stv1_uuC_q3QA68D8AjQumUcr8c8TO8ySO_PDYSqtXAAWEdNVtTN6j4EUgpIKB_Bmkofe9OFs0J21Q9Tl.jpg" alt="Трендовая оправа Oversize #36" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Трендовая оправа Oversize #36</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 600 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки спортивные Polarized #37"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/RsaJJD6n7II7cFsRkzIegmfi5yU_5fvwGx1nEHT9SuyeYqXZj60M0bkage9bBERKl5qIz3sk6aDD5oI1AbjRTuFV.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/RsaJJD6n7II7cFsRkzIegmfi5yU_5fvwGx1nEHT9SuyeYqXZj60M0bkage9bBERKl5qIz3sk6aDD5oI1AbjRTuFV.jpg" alt="Очки спортивные Polarized #37" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки спортивные Polarized #37</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Геометрическая оправа Gold/Black #38"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/SeFg5LUME6Oqfyk8GB-ugKxJYdHjX07D5ixBtjtKLTVcLkpvAkkNCzMSUgQfPkoHXU_7pgCiDCpgxJh7JwcwHVKT.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/SeFg5LUME6Oqfyk8GB-ugKxJYdHjX07D5ixBtjtKLTVcLkpvAkkNCzMSUgQfPkoHXU_7pgCiDCpgxJh7JwcwHVKT.jpg" alt="Геометрическая оправа Gold/Black #38" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Геометрическая оправа Gold/Black #38</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Hexagon #39"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/t8QrraH1FvvtCnHQLvBpSg_Rn2OhNpGL3ABs0i-AR-ftBlQ-q2TUvzT4uEArsTJ3xhRBG6zjKSw2s3_FSktAzyY4.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/t8QrraH1FvvtCnHQLvBpSg_Rn2OhNpGL3ABs0i-AR-ftBlQ-q2TUvzT4uEArsTJ3xhRBG6zjKSw2s3_FSktAzyY4.jpg" alt="Солнцезащитные очки Hexagon #39" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Hexagon #39</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Классическая оправа для зрения #40"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/UPoHsS1gaxhJyP81-dUA_9Onq-ch4yGYbgveXotzqmJ-fe-r9cEYy1y9g4ONohvwcKOnoH_dqIeJIhy_-wNMge8e.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/UPoHsS1gaxhJyP81-dUA_9Onq-ch4yGYbgveXotzqmJ-fe-r9cEYy1y9g4ONohvwcKOnoH_dqIeJIhy_-wNMge8e.jpg" alt="Классическая оправа для зрения #40" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Классическая оправа для зрения #40</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Polarized #41"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/v6wAzJVvgtaN7bkNRi4MkMNKsI8wWT8JgnDnHRQkTmFFoVvjLQeNsGn9Jj51WcVb4nVJknhpJNokBiUOswA0zLM7.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/v6wAzJVvgtaN7bkNRi4MkMNKsI8wWT8JgnDnHRQkTmFFoVvjLQeNsGn9Jj51WcVb4nVJknhpJNokBiUOswA0zLM7.jpg" alt="Солнцезащитные очки Polarized #41" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Polarized #41</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Стильная металлическая оправа #42"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/WTcYOTeQ6JfviSf3sJOwaYfrekurAWS7onyFxA8B8OQtVfVot7kdPMJCAmP6oSuvkclANi09tIKEQORi5nnQTU43.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/WTcYOTeQ6JfviSf3sJOwaYfrekurAWS7onyFxA8B8OQtVfVot7kdPMJCAmP6oSuvkclANi09tIKEQORi5nnQTU43.jpg" alt="Стильная металлическая оправа #42" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Стильная металлическая оправа #42</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки UV400 Black Edition #43"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/wYuLGHarwH1Kj5Fg1Q7R9FF5J-Pxp1GL2s3XG7MMdo3YtMPnBOSVOVjshKAkzGulBSZDWRkYssHIsAE-Bth-CXHU.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/wYuLGHarwH1Kj5Fg1Q7R9FF5J-Pxp1GL2s3XG7MMdo3YtMPnBOSVOVjshKAkzGulBSZDWRkYssHIsAE-Bth-CXHU.jpg" alt="Очки UV400 Black Edition #43" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки UV400 Black Edition #43</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Оправа Cat-Eye с акцентом #44"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/XInutmcNj-YtvCKq9kXz_56UxbH0B0JkSvSJtHMrSrCkBspFmtWQD9Sa2Wifh6Qag9HHUry9pRWSvoqAVBrktLg1.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/XInutmcNj-YtvCKq9kXz_56UxbH0B0JkSvSJtHMrSrCkBspFmtWQD9Sa2Wifh6Qag9HHUry9pRWSvoqAVBrktLg1.jpg" alt="Оправа Cat-Eye с акцентом #44" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Оправа Cat-Eye с акцентом #44</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Aviator #45"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/XPUnPXVTChUOVNtIbvzNvG6GW8ZAbEfqo9FQOdtT95-F0oQAM939Gjz2j3OrQNXWs55tF0tNG3uLT8LBafBxjFdv.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/XPUnPXVTChUOVNtIbvzNvG6GW8ZAbEfqo9FQOdtT95-F0oQAM939Gjz2j3OrQNXWs55tF0tNG3uLT8LBafBxjFdv.jpg" alt="Солнцезащитные очки Aviator #45" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Aviator #45</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 600 ₽"
+                 data-title="Трендовая оправа Oversize #46"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/XZq5ZLx2oLI9eNtN4t7c2e0crGwGNsMyXupctqvTMAqIUo-61HeU9AJvt6SvdQ00U551-v773Y8m_U6UZuONWqr3.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/XZq5ZLx2oLI9eNtN4t7c2e0crGwGNsMyXupctqvTMAqIUo-61HeU9AJvt6SvdQ00U551-v773Y8m_U6UZuONWqr3.jpg" alt="Трендовая оправа Oversize #46" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Трендовая оправа Oversize #46</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 600 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Очки спортивные Polarized #47"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/ybRm-V_-QPGrv9xNkCFsO1GPXxyqQXk5JuxW8QDQhnIC51URht_8Rg0j4aEhLgTmHYx69ltRlav1Y_yKHu06TYYH.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/ybRm-V_-QPGrv9xNkCFsO1GPXxyqQXk5JuxW8QDQhnIC51URht_8Rg0j4aEhLgTmHYx69ltRlav1Y_yKHu06TYYH.jpg" alt="Очки спортивные Polarized #47" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Очки спортивные Polarized #47</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Геометрическая оправа Gold/Black #48"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/ZBY_2CLjGLTL8M6OI56RHnnALFEoxJ1hmqyDnQVUeYy__CXeQlyKizgEw1SgExo8ePbU5I9GrTmJ0TAVV7xy32-N.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/ZBY_2CLjGLTL8M6OI56RHnnALFEoxJ1hmqyDnQVUeYy__CXeQlyKizgEw1SgExo8ePbU5I9GrTmJ0TAVV7xy32-N.jpg" alt="Геометрическая оправа Gold/Black #48" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Геометрическая оправа Gold/Black #48</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="sunglasses" 
+                 data-price="от 1 800 ₽"
+                 data-title="Солнцезащитные очки Hexagon #49"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/_0C3DK7MRJQpPrRil31NsLj1bDWSPL_QVzZgaqtL_e6k_XE1otxNPSFEN562Cxxt3LG0_4CRxHHRmHn6d9BxsI5h.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/_0C3DK7MRJQpPrRil31NsLj1bDWSPL_QVzZgaqtL_e6k_XE1otxNPSFEN562Cxxt3LG0_4CRxHHRmHn6d9BxsI5h.jpg" alt="Солнцезащитные очки Hexagon #49" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Солнцезащитные очки Hexagon #49</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 1 800 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+            <div class="live-photo-card product-card" 
+                 data-category="frames" 
+                 data-price="от 2 500 ₽"
+                 data-title="Классическая оправа для зрения #50"
+                 data-brand="УРАЛ-ОПТИКА"
+                 data-images='["images/client_photos/_ZzoeSf_V6ET_rAS8rXbu-2eRwog3zV628DHQW2vJCYhzEVUenVwFAO6CMvNJ6MN6_kwfcDwGBbKQHKccvnFD5jQ.jpg"]'>
+              <div class="live-photo-img-wrap">
+                <span class="hit-tag live-card-badge">В НАЛИЧИИ</span>
+                <img src="images/client_photos/_ZzoeSf_V6ET_rAS8rXbu-2eRwog3zV628DHQW2vJCYhzEVUenVwFAO6CMvNJ6MN6_kwfcDwGBbKQHKccvnFD5jQ.jpg" alt="Классическая оправа для зрения #50" class="live-photo-img product-image" loading="lazy">
+                <div class="live-photo-overlay btn-view-product">
+                  <span class="live-zoom-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Рассмотреть</span>
+                  </span>
+                </div>
+              </div>
+              <div class="live-card-info">
+                <span class="product-brand live-card-brand">УРАЛ-ОПТИКА</span>
+                <h4 class="product-title-item live-card-title">Классическая оправа для зрения #50</h4>
+                <p class="product-model" style="display:none;">Живое фото оправы с витрины салона оптики в Магнитогорске. Модель доступна для примерки в 7 салонах сети.</p>
+                <div class="product-features-row" style="display:none;">
+                  <span class="product-feature-tag">В наличии</span>
+                  <span class="product-feature-tag">Примерка в 7 салонах</span>
+                  <span class="product-feature-tag">Гарантия качества</span>
+                </div>
+                <div class="live-card-bottom">
+                  <span class="product-price live-card-price">от 2 500 ₽</span>
+                  <button type="button" class="live-card-action btn-check-stock">Примерить →</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="live-slider-footer-hint">
+        <div class="live-hint-left">
+          <span class="hint-pulse-dot">✦</span>
+          <span>Нажмите на любую фотографию, чтобы рассмотреть модель ближе и забронировать примерку</span>
+        </div>
+        <a href="https://vk.me/uraloptikm" target="_blank" rel="noopener" class="live-vk-link">
+          <span>Спросить наличие в VK →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="about-section-styled" id="about">
     <div class="container">
       <div class="brands-split-container">
@@ -3202,6 +4799,7 @@
           <ul class="footer-links-list">
             <li><a href="#promotions">Акции и скидки</a></li>
             <li><a href="#catalog">Каталог очков и линз</a></li>
+            <li><a href="#live-photos">Живые фото из салонов</a></li>
             <li><a href="#about">О компании и мастерской</a></li>
             <li><a href="#reviews">Отзывы клиентов</a></li>
             <li><a href="#salons">Адреса 7 салонов</a></li>
@@ -3352,6 +4950,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20260921-v15"></script>
+  <script src="script.js?v=20260921-v16"></script>
 </body>
 </html>

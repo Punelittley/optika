@@ -793,4 +793,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initScrollAnimations();
+
+
+  // Live photos slider controls
+  const liveSlider = document.getElementById('liveSliderContainer');
+  const livePrev = document.getElementById('livePrev');
+  const liveNext = document.getElementById('liveNext');
+
+  if (liveSlider && livePrev && liveNext) {
+    livePrev.addEventListener('click', () => {
+      liveSlider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    liveNext.addEventListener('click', () => {
+      liveSlider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  }
+
 });
