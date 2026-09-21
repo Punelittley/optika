@@ -2391,12 +2391,13 @@ button, input {
 }
 
 /* ==========================================================================
-   CLEAN & MINIMAL WHITE FOOTER
+/* ==========================================================================
+   CLEAN & STRUCTURED FOOTER WITH MODERN MOBILE RESPONSIVENESS
    ========================================================================== */
 .footer {
-  background-color: #FFFFFF;
+  background-color: #F8FAFC;
   color: #334155;
-  padding: 44px 0 20px;
+  padding: 48px 0 24px;
   border-top: 1px solid #E2E8F0;
   position: relative;
 }
@@ -2404,7 +2405,7 @@ button, input {
 .footer-top-grid {
   display: grid;
   grid-template-columns: 1.35fr 1fr 1.15fr;
-  gap: 44px;
+  gap: 40px;
   margin-bottom: 32px;
 }
 
@@ -2434,20 +2435,21 @@ button, input {
 .footer-license-badge {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  font-size: 0.76rem;
+  gap: 8px;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: #475569;
-  background: #F8FAFC;
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid #E2E8F0;
+  color: #334155;
+  background: #FFFFFF;
+  padding: 7px 13px;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   width: fit-content;
 }
 
 .footer-col-title {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   font-weight: 800;
   color: #0F172A;
   margin-bottom: 14px;
@@ -2462,7 +2464,7 @@ button, input {
   bottom: 0;
   left: 0;
   width: 24px;
-  height: 2px;
+  height: 2.5px;
   background: var(--color-red);
   border-radius: 2px;
 }
@@ -2473,12 +2475,12 @@ button, input {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
 }
 
 .footer-links-list a {
   font-size: 0.88rem;
-  color: #64748B;
+  color: #475569;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
@@ -2491,7 +2493,12 @@ button, input {
 }
 
 .footer-contact-block {
-  margin-bottom: 14px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  margin-bottom: 12px;
 }
 
 .footer-main-phone {
@@ -2499,7 +2506,7 @@ button, input {
   align-items: center;
   gap: 9px;
   font-family: var(--font-heading);
-  font-size: 1.22rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #0F172A;
   text-decoration: none;
@@ -2518,32 +2525,35 @@ button, input {
   background: #10B981;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
   animation: pulse-dot 2s infinite;
+  flex-shrink: 0;
 }
 
 .footer-schedule-text {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: #64748B;
   display: block;
 }
 
 .footer-social-row {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer-social-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   font-family: var(--font-heading);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  padding: 9px 15px;
-  border-radius: 8px;
+  padding: 11px 14px;
+  border-radius: 10px;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .footer-social-btn.btn-vk {
@@ -2554,7 +2564,7 @@ button, input {
 .footer-social-btn.btn-vk:hover {
   background: #0066DB;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 119, 255, 0.35);
 }
 
 .footer-social-btn.btn-max {
@@ -2564,46 +2574,56 @@ button, input {
 
 .footer-social-btn.btn-max:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
 /* Footer Bottom Ribbon */
 .footer-bottom-ribbon {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-top: 18px;
-  border-top: 1px solid #F1F5F9;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid #E2E8F0;
+  gap: 20px;
 }
 
 .footer-copy-text {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  font-size: 0.78rem;
-  color: #94A3B8;
+  gap: 4px;
+}
+
+.footer-copy-line {
+  font-size: 0.8rem;
+  color: #64748B;
+  margin: 0;
 }
 
 .footer-medical-warning {
-  font-size: 0.74rem;
-  color: #64748B;
-  font-style: italic;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #94A3B8;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .footer-scroll-top-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #F8FAFC;
-  color: #475569;
+  background: #FFFFFF;
+  color: #334155;
   border: 1px solid #CBD5E1;
-  padding: 7px 14px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .footer-scroll-top-btn:hover {
@@ -2611,33 +2631,122 @@ button, input {
   color: #FFFFFF;
   border-color: var(--color-red);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(197, 34, 34, 0.25);
+  box-shadow: 0 4px 14px rgba(197, 34, 34, 0.28);
 }
 
 @media (max-width: 900px) {
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    gap: 30px;
+  }
+  .footer-col-brand {
+    grid-column: 1 / -1;
   }
 }
 
-@media (max-width: 600px) {
+/* ==========================================================================
+   MOBILE FOOTER OPTIMIZATION (<= 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
   .footer {
-    padding: 32px 0 18px;
+    padding: 34px 0 20px;
+    background-color: #F8FAFC;
   }
+
   .footer-top-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    margin-bottom: 24px;
-  }
-  .footer-bottom-ribbon {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    gap: 24px;
+    margin-bottom: 22px;
   }
+
+  .footer-col-brand {
+    padding-bottom: 6px;
+  }
+
+  .footer-logo-img {
+    height: 38px;
+  }
+
+  .footer-brand-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: #64748B;
+  }
+
+  .footer-license-badge {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    font-size: 0.76rem;
+  }
+
+  /* 2-column navigation grid: compact, zero wasted whitespace */
+  .footer-links-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 14px;
+  }
+
+  .footer-links-list a {
+    font-size: 0.85rem;
+    padding: 3px 0;
+    line-height: 1.35;
+  }
+
+  /* Contact block & buttons on mobile */
+  .footer-contact-block {
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .footer-main-phone {
+    font-size: 1.15rem;
+    width: 100%;
+  }
+
+  .footer-social-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .footer-social-btn {
+    padding: 11px 8px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+
+  /* Bottom ribbon on mobile */
+  .footer-bottom-ribbon {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    padding-top: 18px;
+  }
+
   .footer-scroll-top-btn {
     width: 100%;
     justify-content: center;
+    padding: 10px 16px;
+  }
+
+  .footer-copy-text {
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-copy-line {
+    font-size: 0.76rem;
+  }
+
+  .footer-medical-warning {
+    font-size: 0.68rem;
+    line-height: 1.35;
   }
 }
 
@@ -3075,11 +3184,6 @@ button, input {
     width: 100%;
     justify-content: center;
   }
-    padding: 18px 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
   .reviews-cta-actions {
     width: 100%;
     flex-direction: column;
@@ -3092,25 +3196,7 @@ button, input {
     padding: 11px;
     font-size: 0.82rem;
   }
-
-  .footer {
-    padding: 24px 0;
-  }
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    padding-bottom: 0;
-  }
-  .footer-nav-list {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .footer-contacts {
-    align-items: flex-start;
-  }
 }
-
 @media (max-width: 400px) {
   .logo-main {
     font-size: 1.02rem;
