@@ -1,15 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.06)';
-    } else {
-      header.style.boxShadow = 'none';
-    }
-  }, { passive: true });
-
   const scrollTopBtn = document.getElementById('scrollTopBtn');
   if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', () => {
@@ -24,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   function openMenu() {
-    mobileMenu.classList.add('open');
-    backdrop.classList.add('active');
+    if (mobileMenu) mobileMenu.classList.add('open');
+    if (backdrop) backdrop.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
-    mobileMenu.classList.remove('open');
-    backdrop.classList.remove('active');
+    if (mobileMenu) mobileMenu.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -41,6 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
   });
 
   /* ==========================================================================
@@ -731,24 +728,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // === SMOOTH SCROLL & HEADER GLASS EFFECT ===
+  // === SMOOTH SCROLL REVEAL ===
   function initScrollAnimations() {
     const revealElements = document.querySelectorAll('.reveal, .reveal-fade, .reveal-stagger');
     revealElements.forEach(el => el.classList.add('is-revealed'));
-
-    // Header scroll glass effect
-    const headerEl = document.getElementById('header');
-    if (headerEl) {
-      const onScroll = () => {
-        if (window.scrollY > 30) {
-          headerEl.classList.add('is-scrolled');
-        } else {
-          headerEl.classList.remove('is-scrolled');
-        }
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    }
   }
 
   initScrollAnimations();
