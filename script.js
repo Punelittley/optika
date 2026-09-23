@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function openMenu() {
     if (mobileMenu) mobileMenu.classList.add('open');
     if (backdrop) backdrop.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('menu-locked');
   }
 
   function closeMenu() {
     if (mobileMenu) mobileMenu.classList.remove('open');
     if (backdrop) backdrop.classList.remove('active');
-    document.body.style.overflow = '';
+    document.body.classList.remove('menu-locked');
   }
 
   if (menuToggle) menuToggle.addEventListener('click', openMenu);
@@ -39,6 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMenu();
     }
   });
+
+  if (backdrop) {
+    backdrop.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+    }, { passive: false });
+  }
+
+  if (mobileMenu) {
+    mobileMenu.addEventListener('touchmove', (e) => {
+      e.stopPropagation();
+    }, { passive: true });
+  }
 
   /* ==========================================================================
      CATALOG PAGINATION & CATEGORY FILTER

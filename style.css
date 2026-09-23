@@ -396,19 +396,23 @@ button, input {
   visibility: hidden;
   pointer-events: none;
   width: 320px;
-  max-width: 86vw;
+  max-width: 88vw;
   height: 100vh;
   height: 100dvh;
+  max-height: 100dvh;
   background: var(--color-white);
   z-index: 2000;
-  padding: 24px 20px;
+  padding: 20px 18px 36px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-shadow: -10px 0 35px rgba(0, 0, 0, 0.2);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  overscroll-behavior-y: contain;
 }
 
 .mobile-menu.open {
@@ -422,7 +426,8 @@ button, input {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--color-border);
-  padding-bottom: 16px;
+  padding-bottom: 14px;
+  flex-shrink: 0;
 }
 
 .mobile-menu-close {
@@ -449,11 +454,11 @@ button, input {
 .mobile-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin: 20px 0;
+  gap: 8px;
+  margin: 14px 0;
   list-style: none;
   padding: 0;
-  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .mobile-nav-link {
@@ -478,7 +483,10 @@ button, input {
 
 .mobile-menu-contacts {
   border-top: 1px solid var(--color-border);
-  padding-top: 20px;
+  padding-top: 14px;
+  margin-top: 10px;
+  padding-bottom: 30px;
+  flex-shrink: 0;
 }
 
 .btn-phone-drawer {
@@ -557,6 +565,11 @@ button, input {
 .btn-vk-small:hover {
   background-color: #E6B400;
   box-shadow: 0 4px 12px rgba(255, 199, 0, 0.35);
+}
+
+body.menu-locked {
+  overflow: hidden;
+  touch-action: none;
 }
 
 .backdrop {
@@ -2869,7 +2882,14 @@ button, input {
   }
 
   .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     height: 62px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   }
   .nav {
     display: none;
